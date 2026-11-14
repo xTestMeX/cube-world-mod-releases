@@ -1,23 +1,48 @@
-# Cube World Mod — Launcher e atualizações
+# Cube World Mod — launcher e atualizações
 
-Launcher do mod clássico Cube World Alpha para **Windows x64** e **Linux x64 (AppImage)**. Cada jogador precisa de uma instalação própria compatível do jogo. Os executáveis originais, bases de dados originais e saves não são distribuídos.
+Mod comunitário para **Cube World Alpha de 23/07/2013**, com launcher **Windows x64** e **Linux x64 AppImage**. Port Vulkan separado e não incluído.
 
-## Estado atual
+## Descarregar
 
-A primeira versão do launcher está em preparação. Inclui uma cópia solo isolada, instalação do mod 0.36.2, runtime incluído e verificação de atualizações por manifesto Ed25519 assinado.
+Versão pública experimental atual: **0.37.0-coop.preview.12**, launcher **0.2.11**.
 
-**O cooperativo completo ainda não está disponível.** A ponte de rede e partes do servidor já foram implementadas e testadas de forma isolada, mas falta integrar todo o conteúdo e confirmar uma sessão real. Não é necessário abrir portas para usar o modo solo.
+- [Windows x64 — launcher EXE](https://github.com/xTestMeX/cube-world-mod-releases/releases/download/0.37.0-coop.preview.12/CubeWorldMod-Windows-x64.exe)
+- [Linux x64 — AppImage](https://github.com/xTestMeX/cube-world-mod-releases/releases/download/0.37.0-coop.preview.12/CubeWorldMod-Linux-x64.AppImage)
+- [Notas, pacotes e ficheiros de verificação](https://github.com/xTestMeX/cube-world-mod-releases/releases/tag/0.37.0-coop.preview.12)
 
-Os rascunhos não são atualizações públicas. Uma release estável só será disponibilizada depois de verificados os pacotes; as pré-versões serão identificadas explicitamente.
+Cada pessoa precisa da sua própria instalação compatível do jogo. O download **não inclui Cube.exe, Server.exe, bases de dados originais ou saves**. O launcher verifica os executáveis antes de preparar uma cópia isolada. As DLLs do mod continuam x86, como exige o jogo original.
 
-## Downloads futuros
+## Instalação
 
-Os ficheiros serão disponibilizados em [Releases](https://github.com/xTestMeX/cube-world-mod-releases/releases):
+1. Descarrega o launcher para o teu sistema. No Linux, permite a execução da AppImage nas propriedades do ficheiro (ou usa `chmod +x CubeWorldMod-Linux-x64.AppImage`).
+2. Abre o launcher e, em **Configuração**, seleciona a pasta do jogo que contém `Cube.exe`, `Server.exe` e os dados originais. No Linux, instala a Steam e o Proton Experimental; o launcher também permite escolher outro Proton.
+3. Cria um perfil solo ou cooperativo. Os personagens são criados dentro do jogo. Perfis, saves e configurações são separados da instalação original.
+4. Usa **Jogar solo**, **Criar sessão** ou **Entrar com convite**, conforme o caso.
 
-- `CubeWorldMod-Windows-x64.exe`
-- `CubeWorldMod-Linux-x64.AppImage`
-- Pacotes de atualização, manifesto assinado e hashes SHA-256.
+O launcher inclui runtime .NET e o mod; não é necessário instalar .NET separadamente.
 
-Os dados e configurações de cada jogador ficam separados dos ficheiros de versões. O launcher verifica assinaturas e hashes antes de instalar e conserva a versão anterior.
+## Cooperativo experimental
+
+Até **quatro jogadores**, incluindo o anfitrião. Todos devem usar a mesma versão do pacote.
+
+- Anfitrião: seleciona um mundo, coloca o IP público/DNS no campo de convite, cria a sessão e partilha o convite `cwmod://...` em privado.
+- Amigos: selecionam um perfil cooperativo e usam **Entrar com convite**.
+- Dentro do jogo: **Connect to server → 127.0.0.1**, tanto no anfitrião como nos convidados. Este endereço liga o jogo à ponte local do launcher; o IP público pertence ao convite.
+- Para ligação direta pela Internet, o anfitrião encaminha **TCP 12345** para o IP local do seu PC. Em CGNAT poderá ser necessária uma rede privada virtual ou outro anfitrião acessível. Não abras a porta nativa diretamente.
+- Mantém launcher e servidor em execução durante a sessão. O convite contém uma credencial; partilha-o apenas com os participantes.
+
+Inclui as seis classes, skills e conteúdo de missões/estruturas/expedições integrado no mod clássico. **É uma pré-versão, não uma versão estável.** Compilação e testes simulados não provam que todo o conteúdo funciona numa sessão real Windows/Linux. O autor confirmou melhorias de latência na sua sessão; a confirmação completa entre amigos permanece pendente. `CoopReady=false` continua explícito.
+
+## Próximas atualizações
+
+O launcher verifica automaticamente o canal público ao abrir. Também podes usar **Procurar atualizações**; fecha primeiro o jogo e o servidor. Os updates só ficam disponíveis quando o autor publica uma nova versão.
+
+Canal atual: [manifesto experimental assinado](https://raw.githubusercontent.com/xTestMeX/cube-world-mod-releases/main/channels/preview.json). A assinatura Ed25519 autentica o manifesto, e SHA-256 verifica cada ficheiro. Configurações e saves permanecem fora das pastas de versões. O launcher conserva a versão anterior e prepara a sua própria substituição ao fechar.
+
+Se usas um launcher local anterior a **0.2.11**, descarrega esta AppImage/EXE uma vez. O novo launcher migra o antigo endereço oficial de atualização; endereços personalizados são preservados.
+
+## Fontes e dependências
+
+Cada release inclui os fontes correspondentes do mod/launcher, `SHA256SUMS` e avisos/licenças de terceiros. Apenas ficheiros próprios e dependências redistribuíveis são publicados. O jogo original, os mundos, os personagens, convites e chaves privadas de publicação não são distribuídos.
 
 Projeto comunitário não oficial, sem afiliação com os criadores de Cube World.
