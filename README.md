@@ -4,19 +4,19 @@ Mod comunitário para **Cube World Alpha de 23/07/2013**, com launcher **Windows
 
 ## Descarregar
 
-Versão pública experimental atual: **0.37.0-coop.preview.14**, launcher **0.2.13**.
+Versão pública experimental atual: **0.37.0-coop.preview.15**, launcher **0.2.14**.
 
-- [Windows x64 — launcher EXE](https://github.com/xTestMeX/cube-world-mod-releases/releases/download/0.37.0-coop.preview.14/CubeWorldMod-Windows-x64.exe)
-- [Linux x64 — AppImage](https://github.com/xTestMeX/cube-world-mod-releases/releases/download/0.37.0-coop.preview.14/CubeWorldMod-Linux-x64.AppImage)
-- [Notas, pacotes e ficheiros de verificação](https://github.com/xTestMeX/cube-world-mod-releases/releases/tag/0.37.0-coop.preview.14)
+- [Windows x64 — launcher EXE](https://github.com/xTestMeX/cube-world-mod-releases/releases/download/0.37.0-coop.preview.15/CubeWorldMod-Windows-x64.exe)
+- [Linux x64 — AppImage](https://github.com/xTestMeX/cube-world-mod-releases/releases/download/0.37.0-coop.preview.15/CubeWorldMod-Linux-x64.AppImage)
+- [Notas, pacotes e ficheiros de verificação](https://github.com/xTestMeX/cube-world-mod-releases/releases/tag/0.37.0-coop.preview.15)
 
 Cada pessoa precisa da sua própria instalação compatível do jogo. O download **não inclui Cube.exe, Server.exe, bases de dados originais ou saves**. O launcher verifica os executáveis antes de preparar uma cópia isolada. As DLLs do mod continuam x86, como exige o jogo original.
 
 ## Correção do arranque Windows
 
-O launcher 0.2.13 corrige um bloqueio reproduzido no carregamento da DLL. A thread principal permanece em execução durante o carregamento; a inicialização ocorre na thread da janela Cube quando esta fica pronta. Inclui diagnóstico da etapa, erro remoto e saída do processo em `launcher-debug.log`/`native-run.log` e `classes-alpha.log`.
+A preview.15 corrige verificações de código que recusavam o executável quando o Windows o carregava noutra base de memória (ASLR). Isso podia fechar o jogo durante a inicialização das missões e impedir classes, mapa, modelos e terreno de serem integrados. A correção respeita as relocações do executável exato, mantém ASLR ativo e não altera o Cube.exe. Conserva também a correção anterior do carregamento da DLL e a inicialização na thread da janela.
 
-Quem recebeu «Mod injection failed (Windows error 0)» deve atualizar, fechar/reabrir o launcher e tentar novamente. A confirmação no PC Windows afetado ainda é necessária; os testes Win32 isolados sob Proton não substituem essa verificação. As bibliotecas de rede mantêm as melhorias de latência anteriores.
+Quem viu o jogo abrir e fechar deve atualizar, fechar/reabrir o launcher e testar primeiro solo, depois cooperativo. Foram verificados oito instaladores reais e cinco trampolins/caves em programas Win32 próprios, além das assinaturas e compilações. Os testes isolados sob Proton não substituem a confirmação no PC Windows afetado. Os logs incluem a base real da imagem e a etapa de falha; as bibliotecas de rede mantêm as melhorias de latência anteriores.
 
 ## Instalação
 
