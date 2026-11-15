@@ -4,13 +4,21 @@ Mod comunitário para **Cube World Alpha de 23/07/2013**, com launcher **Windows
 
 ## Descarregar
 
-Versão pública experimental atual: **0.37.0-coop.preview.20**, launcher **0.2.19**.
+Versão pública experimental atual: **0.37.0-coop.preview.21**, launcher **0.2.20**.
 
-- [Windows x64 — launcher EXE](https://github.com/xTestMeX/cube-world-mod-releases/releases/download/0.37.0-coop.preview.20/CubeWorldMod-Windows-x64.exe)
-- [Linux x64 — AppImage](https://github.com/xTestMeX/cube-world-mod-releases/releases/download/0.37.0-coop.preview.20/CubeWorldMod-Linux-x64.AppImage)
-- [Notas, pacotes e ficheiros de verificação](https://github.com/xTestMeX/cube-world-mod-releases/releases/tag/0.37.0-coop.preview.20)
+- [Windows x64 — launcher EXE](https://github.com/xTestMeX/cube-world-mod-releases/releases/download/0.37.0-coop.preview.21/CubeWorldMod-Windows-x64.exe)
+- [Linux x64 — AppImage](https://github.com/xTestMeX/cube-world-mod-releases/releases/download/0.37.0-coop.preview.21/CubeWorldMod-Linux-x64.AppImage)
+- [Notas, pacotes e ficheiros de verificação](https://github.com/xTestMeX/cube-world-mod-releases/releases/tag/0.37.0-coop.preview.21)
 
 Cada pessoa precisa da sua própria instalação compatível do jogo. O download **não inclui Cube.exe, Server.exe, bases de dados originais ou saves**. O launcher verifica os executáveis antes de preparar uma cópia isolada. As DLLs do mod continuam x86, como exige o jogo original.
+
+## Proteção gráfica na chegada — preview.21
+
+A preview.21 corrige um percurso capaz de provocar crash ao chegar ao terreno remoto: o motor podia aceitar uma zona cujo cabeçalho existia, mas cujas colunas ainda não estavam carregadas. A construção gráfica passa a exigir o terreno e os vizinhos da iluminação disponíveis, com nova verificação e proteção das colunas durante a chamada nativa.
+
+Os testes isolados reproduziram a falha e validaram a rejeição pelo adaptador compilado, descarga entre verificações, contenção dos bloqueios, ABI x86, instalação dos quatro pontos nas duas DLLs e 14 assinaturas. Builds Windows/Linux, launcher e UI headless passaram sem abrir Cube.exe/Server.exe. **Ainda falta confirmar se elimina o crash observado na sessão real.**
+
+Mantém o destino cooperativo a cerca de 10 000 blocos, o cenário e as melhorias anteriores. Servidor, auxiliares de rede, configurações e saves preservados. Todos fecham jogo/servidor, atualizam e fecham/reabrem o launcher. Criar sessão nova e testar entrada, inventário e extração após uma etapa.
 
 ## Destino das expedições — preview.20
 
