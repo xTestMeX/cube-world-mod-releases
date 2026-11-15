@@ -4,13 +4,21 @@ Mod comunitário para **Cube World Alpha de 23/07/2013**, com launcher **Windows
 
 ## Descarregar
 
-Versão pública experimental atual: **0.37.0-coop.preview.17**, launcher **0.2.16**.
+Versão pública experimental atual: **0.37.0-coop.preview.18**, launcher **0.2.17**.
 
-- [Windows x64 — launcher EXE](https://github.com/xTestMeX/cube-world-mod-releases/releases/download/0.37.0-coop.preview.17/CubeWorldMod-Windows-x64.exe)
-- [Linux x64 — AppImage](https://github.com/xTestMeX/cube-world-mod-releases/releases/download/0.37.0-coop.preview.17/CubeWorldMod-Linux-x64.AppImage)
-- [Notas, pacotes e ficheiros de verificação](https://github.com/xTestMeX/cube-world-mod-releases/releases/tag/0.37.0-coop.preview.17)
+- [Windows x64 — launcher EXE](https://github.com/xTestMeX/cube-world-mod-releases/releases/download/0.37.0-coop.preview.18/CubeWorldMod-Windows-x64.exe)
+- [Linux x64 — AppImage](https://github.com/xTestMeX/cube-world-mod-releases/releases/download/0.37.0-coop.preview.18/CubeWorldMod-Linux-x64.AppImage)
+- [Notas, pacotes e ficheiros de verificação](https://github.com/xTestMeX/cube-world-mod-releases/releases/tag/0.37.0-coop.preview.18)
 
 Cada pessoa precisa da sua própria instalação compatível do jogo. O download **não inclui Cube.exe, Server.exe, bases de dados originais ou saves**. O launcher verifica os executáveis antes de preparar uma cópia isolada. As DLLs do mod continuam x86, como exige o jogo original.
+
+## Alt+Tab Windows e recuperação de expedições
+
+A preview.18 adia a reposição gráfica enquanto o jogo está minimizado ou o dispositivo está perdido, evitando o percurso de bloqueio identificado em fullscreen. Os uploads de terreno distante mantêm a malha anterior e voltam a tentar após falha.
+
+Ao religar depois de um teleporte interrompido, reinicia a confirmação da deslocação por ligação. A chegada exige proximidade XYZ; o painel distingue «A regressar ao mundo» de preparar uma expedição e de esperar pelos restantes participantes. Preserva prémios confirmados e o formato dos saves.
+
+Testes isolados de dispositivo perdido/restauro, religação, prémios, builds e UI headless passaram sem abrir Cube.exe/Server.exe. **A confirmação real do Alt+Tab no Windows continua pendente.** Mantém as melhorias anteriores de latência e os limites de trabalho. Todos devem fechar jogo/servidor, atualizar e fechar/reabrir o launcher antes de criar uma nova sessão.
 
 ## Expedições próximas e desempenho
 
