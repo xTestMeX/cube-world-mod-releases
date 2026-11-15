@@ -4,13 +4,23 @@ Mod comunitário para **Cube World Alpha de 23/07/2013**, com launcher **Windows
 
 ## Descarregar
 
-Versão pública experimental atual: **0.37.0-coop.preview.25**, launcher **0.2.24**.
+Versão pública experimental atual: **0.37.0-coop.preview.26**, launcher **0.2.25**.
 
-- [Windows x64 — launcher EXE](https://github.com/xTestMeX/cube-world-mod-releases/releases/download/0.37.0-coop.preview.25/CubeWorldMod-Windows-x64.exe)
-- [Linux x64 — AppImage](https://github.com/xTestMeX/cube-world-mod-releases/releases/download/0.37.0-coop.preview.25/CubeWorldMod-Linux-x64.AppImage)
-- [Notas, pacotes e ficheiros de verificação](https://github.com/xTestMeX/cube-world-mod-releases/releases/tag/0.37.0-coop.preview.25)
+- [Windows x64 — launcher EXE](https://github.com/xTestMeX/cube-world-mod-releases/releases/download/0.37.0-coop.preview.26/CubeWorldMod-Windows-x64.exe)
+- [Linux x64 — AppImage](https://github.com/xTestMeX/cube-world-mod-releases/releases/download/0.37.0-coop.preview.26/CubeWorldMod-Linux-x64.AppImage)
+- [Notas, pacotes e ficheiros de verificação](https://github.com/xTestMeX/cube-world-mod-releases/releases/tag/0.37.0-coop.preview.26)
 
 Cada pessoa precisa da sua própria instalação compatível do jogo. O download **não inclui Cube.exe, Server.exe, bases de dados originais ou saves**. O launcher verifica os executáveis antes de preparar uma cópia isolada. As DLLs do mod continuam x86, como exige o jogo original.
+
+## Terreno 9/9 sem teleporte — preview.26
+
+Corrige a sonda de chegada que comparava os valores RGB dos blocos de ar. Esses valores representam iluminação local e podem diferir entre servidor e cliente, mesmo com o mesmo chão e espaço livre. A diferença foi observada por leitura autorizada de uma sessão existente e reproduzida com o código compilado: a DLL anterior rejeita os mesmos dados e a corrigida aceita-os.
+
+A sonda continua a comparar o tipo de todos os blocos, a cor dos sólidos, o chão, a altura, as colunas carregadas e o espaço livre. Apenas deixa de exigir iluminação RGB igual no ar. **Não é necessário criar outro mundo nem apagar a arena guardada.** Não altera o servidor, os limites de rede ou os saves.
+
+Inclui Windows x64 e Linux x64 AppImage, launcher **0.2.25**. Todos devem fechar jogo e servidor, atualizar, fechar/reabrir o launcher e criar uma sessão nova no mesmo mundo. Anfitrião e convidados devem usar **preview.26**. Testar entrada, primeira ronda, passagem à segunda, extração e outra entrada.
+
+Testes dirigidos antes/depois com os mesmos bytes observados, verificações negativas de chão/espaço ocupado, builds, interface headless, assinaturas e hashes passaram. Não foi iniciado Cube.exe/Server.exe nem se escreveu na memória ou nos saves da sessão observada. **O teste real da nova versão continua pendente.** As otimizações anteriores mantêm-se; não há uma medição de carregamento total 10× mais rápido.
 
 ## Chegada, recuperação e carregamento — preview.25
 
