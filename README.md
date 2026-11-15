@@ -4,13 +4,21 @@ Mod comunitário para **Cube World Alpha de 23/07/2013**, com launcher **Windows
 
 ## Descarregar
 
-Versão pública experimental atual: **0.37.0-coop.preview.27**, launcher **0.2.26**.
+Versão pública experimental atual: **0.37.0-coop.preview.28**, launcher **0.2.27**.
 
-- [Windows x64 — launcher EXE](https://github.com/xTestMeX/cube-world-mod-releases/releases/download/0.37.0-coop.preview.27/CubeWorldMod-Windows-x64.exe)
-- [Linux x64 — AppImage](https://github.com/xTestMeX/cube-world-mod-releases/releases/download/0.37.0-coop.preview.27/CubeWorldMod-Linux-x64.AppImage)
-- [Notas, pacotes e ficheiros de verificação](https://github.com/xTestMeX/cube-world-mod-releases/releases/tag/0.37.0-coop.preview.27)
+- [Windows x64 — launcher EXE](https://github.com/xTestMeX/cube-world-mod-releases/releases/download/0.37.0-coop.preview.28/CubeWorldMod-Windows-x64.exe)
+- [Linux x64 — AppImage](https://github.com/xTestMeX/cube-world-mod-releases/releases/download/0.37.0-coop.preview.28/CubeWorldMod-Linux-x64.AppImage)
+- [Notas, pacotes e ficheiros de verificação](https://github.com/xTestMeX/cube-world-mod-releases/releases/tag/0.37.0-coop.preview.28)
 
 Cada pessoa precisa da sua própria instalação compatível do jogo. O download **não inclui Cube.exe, Server.exe, bases de dados originais ou saves**. O launcher verifica os executáveis antes de preparar uma cópia isolada. As DLLs do mod continuam x86, como exige o jogo original.
+
+## Hornets que ficavam paradas — preview.28
+
+Corrige três hornets de cada vaga de seis que recebiam arcos, ativando a distância de paragem de arqueiro do motor apesar de a espécie atacar de perto. Todas passam a usar o perfil de combate próximo dos três exemplares que já funcionavam. Arqueiros humanoides e cultistas mantêm o comportamento à distância. Preserva a contagem inicial de 10 segundos, teleporte, rondas contínuas e limites de rede; sem novos hooks nem aumento da frequência de consultas ou envio de terreno.
+
+A receita real de spawn e as instruções originais do Server.exe reproduziram exatamente três hornets com alcance de arqueiro antes da correção e zero depois. Testes curtos de rondas, contagem inicial e religação, assinaturas nativas, builds Windows/Linux e interface headless passaram. DLLs cliente, auxiliares de rede e INIs preservados por hash. **A perseguição e os ataques completos em jogo ainda precisam de confirmação dos jogadores.** Nenhum Cube.exe/Server.exe foi aberto pelo agente.
+
+Inclui launcher **0.2.27**, Windows x64 e Linux x64 AppImage. Todos fecham jogo e servidor, procuram atualizações, fecham/reabrem o launcher e criam uma sessão nova no mesmo mundo, com anfitrião e convidados na **preview.28**. Teste curto: numa vaga de hornets, permanecer a 15–25 blocos para verificar que as seis avançam; recuar dentro da sala e confirmar a perseguição.
 
 ## Contagem inicial das expedições — preview.27
 
