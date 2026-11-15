@@ -4,13 +4,23 @@ Mod comunitário para **Cube World Alpha de 23/07/2013**, com launcher **Windows
 
 ## Descarregar
 
-Versão pública experimental atual: **0.37.0-coop.preview.24**, launcher **0.2.23**.
+Versão pública experimental atual: **0.37.0-coop.preview.25**, launcher **0.2.24**.
 
-- [Windows x64 — launcher EXE](https://github.com/xTestMeX/cube-world-mod-releases/releases/download/0.37.0-coop.preview.24/CubeWorldMod-Windows-x64.exe)
-- [Linux x64 — AppImage](https://github.com/xTestMeX/cube-world-mod-releases/releases/download/0.37.0-coop.preview.24/CubeWorldMod-Linux-x64.AppImage)
-- [Notas, pacotes e ficheiros de verificação](https://github.com/xTestMeX/cube-world-mod-releases/releases/tag/0.37.0-coop.preview.24)
+- [Windows x64 — launcher EXE](https://github.com/xTestMeX/cube-world-mod-releases/releases/download/0.37.0-coop.preview.25/CubeWorldMod-Windows-x64.exe)
+- [Linux x64 — AppImage](https://github.com/xTestMeX/cube-world-mod-releases/releases/download/0.37.0-coop.preview.25/CubeWorldMod-Linux-x64.AppImage)
+- [Notas, pacotes e ficheiros de verificação](https://github.com/xTestMeX/cube-world-mod-releases/releases/tag/0.37.0-coop.preview.25)
 
 Cada pessoa precisa da sua própria instalação compatível do jogo. O download **não inclui Cube.exe, Server.exe, bases de dados originais ou saves**. O launcher verifica os executáveis antes de preparar uma cópia isolada. As DLLs do mod continuam x86, como exige o jogo original.
+
+## Chegada, recuperação e carregamento — preview.25
+
+Corrige a validação gráfica que rejeitava parcelas concluídas com lista opaca vazia. Mantém as verificações de chão, sondas, coordenadas XYZ, parcela atual e construção terminada. Ao perder a ligação ou terminar o regresso, limpa a reserva e o estado local da transferência. Uma nova tentativa prefere uma arena guardada livre a um slot vazio; o contador de preparação mostra o progresso atual do anfitrião em vez do 9/9 da tentativa anterior.
+
+A verificação local da transferência passa de 1000 para 100 ms. O estado de entrada recebe prioridade alternada com as restantes consultas, e os reenvios são limitados. Os orçamentos de construção e envio de blocos mantêm-se. **Não é uma medição de carregamento total 10× mais rápido**; os tempos e FPS reais continuam por medir.
+
+Testes antes/depois com instruções nativas de publicação gráfica, regresso após tempo limite, religação, nova tentativa, preferência de cache, contador e consultas passaram. IPC Windows x86 e interface headless verificados; ambos launchers compilados, manifestos assinados e hashes conferidos. Nenhum Cube.exe/Server.exe aberto. **A correção ainda precisa de confirmação real em jogo.**
+
+Todos devem fechar jogo e servidor, atualizar, fechar/reabrir o launcher e confirmar **launcher 0.2.24 / mod preview.25**. O anfitrião cria uma sessão nova, com todos os convidados atualizados. Testar entrada, ronda 2, extração e nova tentativa. Se ocorrer novo limite, testar regresso e nova entrada sem reiniciar o servidor; `classes-alpha.log` inclui agora a etapa exata da espera.
 
 ## Rondas contínuas e arena reutilizável — preview.24
 
