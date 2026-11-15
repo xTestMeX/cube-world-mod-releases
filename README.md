@@ -4,21 +4,25 @@ Mod comunitário para **Cube World Alpha de 23/07/2013**, com launcher **Windows
 
 ## Descarregar
 
-Versão pública experimental atual: **0.37.0-coop.preview.16**, launcher **0.2.15**.
+Versão pública experimental atual: **0.37.0-coop.preview.17**, launcher **0.2.16**.
 
-- [Windows x64 — launcher EXE](https://github.com/xTestMeX/cube-world-mod-releases/releases/download/0.37.0-coop.preview.16/CubeWorldMod-Windows-x64.exe)
-- [Linux x64 — AppImage](https://github.com/xTestMeX/cube-world-mod-releases/releases/download/0.37.0-coop.preview.16/CubeWorldMod-Linux-x64.AppImage)
-- [Notas, pacotes e ficheiros de verificação](https://github.com/xTestMeX/cube-world-mod-releases/releases/tag/0.37.0-coop.preview.16)
+- [Windows x64 — launcher EXE](https://github.com/xTestMeX/cube-world-mod-releases/releases/download/0.37.0-coop.preview.17/CubeWorldMod-Windows-x64.exe)
+- [Linux x64 — AppImage](https://github.com/xTestMeX/cube-world-mod-releases/releases/download/0.37.0-coop.preview.17/CubeWorldMod-Linux-x64.AppImage)
+- [Notas, pacotes e ficheiros de verificação](https://github.com/xTestMeX/cube-world-mod-releases/releases/tag/0.37.0-coop.preview.17)
 
 Cada pessoa precisa da sua própria instalação compatível do jogo. O download **não inclui Cube.exe, Server.exe, bases de dados originais ou saves**. O launcher verifica os executáveis antes de preparar uma cópia isolada. As DLLs do mod continuam x86, como exige o jogo original.
 
-## Correção do arranque cooperativo Windows
+## Expedições próximas e desempenho
 
-A preview.16 corrige uma verificação que ainda recusava o arranque pelo convite quando o Windows carregava o jogo noutra base de memória (ASLR). O adaptador de rede passa a validar dois endereços IAT pela base real, mantendo o SHA-256 e os restantes bytes exatos. Conserva as correções anteriores das classes e do carregamento da DLL, sem alterar Cube.exe nem desativar ASLR.
+A preview.17 coloca a arena cooperativa na zona próxima do organizador, pelo menos **500 metros acima da entrada**, em vez de teleportar para milhões de metros. Mantém as dez salas e a decoração. A limpeza espera pelo regresso dos jogadores; um journal permite retomar a remoção após interrupção. A implementação solo anterior mantém-se separada.
 
-Os novos registos identificaram a rejeição no bootstrap nativo, antes das classes e da ligação ao mundo. A falha foi reproduzida e corrigida em duas bases de memória com o instalador real; os testes de ligação local, lock e preservação dos registos passaram. Mantêm-se as rotinas que melhoraram a latência e TCP_NODELAY. O servidor e as DLLs de gameplay não mudaram.
+A compactação seletiva do histórico impede acumular repetidamente as mesmas ações de construção/remoção. Preserva alterações alheias e mantém a sincronização limitada a 1024 ações por jogador/tick. O arranque Windows foi confirmado pelo utilizador na preview.16 e as respetivas correções mantêm-se.
 
-Fecha jogo/servidor, atualiza e fecha/reabre o launcher. O convidado deve voltar a entrar pelo convite. A confirmação no Windows físico continua pendente; os testes isolados não substituem essa confirmação. Se voltar a falhar, recolhe `native-run.log`, `client-net.log`, `launcher-process.log` e `classes-alpha.log` da pasta do perfil. O novo `client-net.log` identifica a etapa interna e a base da imagem.
+Para o terreno distante, acima de 100% de distância, reduz picos de trabalho: máximo quatro uploads de malhas por tick, orçamento suave de 2 ms e provas de memória apenas quando há trabalho. Não reduz o detalhe escolhido. **O ganho real de FPS no Windows ainda não foi medido.** A arena elevada aumenta a memória das colunas nativas; apagar os blocos não devolve imediatamente toda essa capacidade.
+
+Testes curtos de ciclo, gravação falhada, crash, quatro repetições do histórico e replay grande passaram; compilação Windows/Linux e 22 assinaturas nativas verificadas. Não foi aberto Cube.exe/Server.exe. Desenho, navegação e desempenho reais precisam da confirmação dos jogadores.
+
+Fecha jogo/servidor, atualiza todos os participantes e fecha/reabre o launcher. Cria uma sessão nova, inicia uma expedição F6, extrai ambos e repete uma vez para confirmar a remoção e reutilização.
 
 ## Instalação
 
