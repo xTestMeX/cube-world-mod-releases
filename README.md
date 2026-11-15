@@ -4,13 +4,27 @@ Mod comunitário para **Cube World Alpha de 23/07/2013**, com launcher **Windows
 
 ## Descarregar
 
-Versão pública experimental atual: **0.37.0-coop.preview.29**, launcher **0.2.28**.
+Versão pública experimental atual: **0.37.0-coop.preview.30**, launcher **0.2.29**.
 
-- [Windows x64 — launcher EXE](https://github.com/xTestMeX/cube-world-mod-releases/releases/download/0.37.0-coop.preview.29/CubeWorldMod-Windows-x64.exe)
-- [Linux x64 — AppImage](https://github.com/xTestMeX/cube-world-mod-releases/releases/download/0.37.0-coop.preview.29/CubeWorldMod-Linux-x64.AppImage)
-- [Notas, pacotes e ficheiros de verificação](https://github.com/xTestMeX/cube-world-mod-releases/releases/tag/0.37.0-coop.preview.29)
+- [Windows x64 — launcher EXE](https://github.com/xTestMeX/cube-world-mod-releases/releases/download/0.37.0-coop.preview.30/CubeWorldMod-Windows-x64.exe)
+- [Linux x64 — AppImage](https://github.com/xTestMeX/cube-world-mod-releases/releases/download/0.37.0-coop.preview.30/CubeWorldMod-Linux-x64.AppImage)
+- [Notas, pacotes e ficheiros de verificação](https://github.com/xTestMeX/cube-world-mod-releases/releases/tag/0.37.0-coop.preview.30)
 
 Cada pessoa precisa da sua própria instalação compatível do jogo. O download **não inclui Cube.exe, Server.exe, bases de dados originais ou saves**. O launcher verifica os executáveis antes de preparar uma cópia isolada. As DLLs do mod continuam x86, como exige o jogo original.
+
+## Guardas, armas e correções cooperativas — preview.30
+
+As torres recebem quatro guardas humanos distribuídos pelos pisos e o baú fica protegido até derrotá-los. Inclui torres existentes no cooperativo; em solo aplica-se às torres geradas após atualizar. O Guardião das Ruínas recebe correções de chão/spawn, libertação de slots de encontros antigos e loot pelo percurso nativo de boss.
+
+Corrige duplicação contínua dos prémios de expedição, cliques de venda/largar itens e armas iniciais no Necromante e regresso dos participantes mortos ao descanso após os companheiros completarem a ronda. Baús de acampamentos, ruínas e torres usam **R**, com validação e recibos independentes; os prisioneiros têm indicador e interação de resgate/escolta. A relíquia de missão usa a sua posição física real, incluindo convidados e contratos já aceites. Diário/ofertas recebem prioridade sem aumentar a frequência global de rede.
+
+O M1 do Necromante exige o **Cajado Ossário em mão**, atinge recursos/objetos destrutíveis nativos e apresenta números de dano confirmado. M2 deixa de usar o efeito incorreto de Maldição. A vida dos esqueletos, guardião e exército desce **45%**, preservando o escalamento por pontos. O M1 da **Lâmina Sanguínea perde 30% do dano**; Garras e Cyclone mantêm-se.
+
+As sete armas especiais participam nos drops nativos e no stock das lojas, preservando os atributos, nível, qualidade e upgrades nativos. Reabrir a loja não rerola o stock. Os **preços de compra nos NPCs duplicam**, mantendo o valor de venda do jogador e o crafting.
+
+O launcher **0.2.29** reinicia automaticamente após uma atualização verificada, com jogo/servidor fechados. Quem atualizar a partir do launcher 0.2.28 deve **fechar/reabrir manualmente uma vez** para carregar o novo launcher. Anfitrião e convidados devem usar preview.30 e iniciar uma sessão nova. Mantém as correções anteriores de terreno, rede e expedições.
+
+Compilações e testes curtos dirigidos, interface headless, assinaturas Ed25519 e hashes passaram. **A confirmação real em Windows/Proton e entre computadores continua a depender dos jogadores.** Nenhum Cube.exe/Server.exe foi aberto pelo agente. Itens já duplicados não são apagados automaticamente, pois podem coincidir com exemplares legítimos. Recuar os recibos dos baús requer o backup do mundo correspondente.
 
 ## Vampiro, Necromante e intervalo das expedições — preview.29
 
@@ -153,7 +167,7 @@ Inclui as seis classes, skills e conteúdo de missões/estruturas/expedições i
 
 O launcher verifica automaticamente o canal público ao abrir. Também podes usar **Procurar atualizações**; fecha primeiro o jogo e o servidor. Os updates só ficam disponíveis quando o autor publica uma nova versão.
 
-Canal atual: [manifesto experimental assinado](https://raw.githubusercontent.com/xTestMeX/cube-world-mod-releases/main/channels/preview.json). A assinatura Ed25519 autentica o manifesto, e SHA-256 verifica cada ficheiro. Configurações e saves permanecem fora das pastas de versões. O launcher conserva a versão anterior e prepara a sua própria substituição ao fechar.
+Canal atual: [manifesto experimental assinado](https://raw.githubusercontent.com/xTestMeX/cube-world-mod-releases/main/channels/preview.json). A assinatura Ed25519 autentica o manifesto, e SHA-256 verifica cada ficheiro. Configurações e saves permanecem fora das pastas de versões. O launcher conserva a versão anterior e, a partir da versão 0.2.29, substitui-se e reinicia automaticamente após a atualização verificada. Um launcher anterior precisa de ser fechado e reaberto manualmente uma vez.
 
 Se usas um launcher local anterior a **0.2.11**, descarrega esta AppImage/EXE uma vez. O novo launcher migra o antigo endereço oficial de atualização; endereços personalizados são preservados.
 
