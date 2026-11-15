@@ -4,13 +4,23 @@ Mod comunitário para **Cube World Alpha de 23/07/2013**, com launcher **Windows
 
 ## Descarregar
 
-Versão pública experimental atual: **0.37.0-coop.preview.18**, launcher **0.2.17**.
+Versão pública experimental atual: **0.37.0-coop.preview.19**, launcher **0.2.18**.
 
-- [Windows x64 — launcher EXE](https://github.com/xTestMeX/cube-world-mod-releases/releases/download/0.37.0-coop.preview.18/CubeWorldMod-Windows-x64.exe)
-- [Linux x64 — AppImage](https://github.com/xTestMeX/cube-world-mod-releases/releases/download/0.37.0-coop.preview.18/CubeWorldMod-Linux-x64.AppImage)
-- [Notas, pacotes e ficheiros de verificação](https://github.com/xTestMeX/cube-world-mod-releases/releases/tag/0.37.0-coop.preview.18)
+- [Windows x64 — launcher EXE](https://github.com/xTestMeX/cube-world-mod-releases/releases/download/0.37.0-coop.preview.19/CubeWorldMod-Windows-x64.exe)
+- [Linux x64 — AppImage](https://github.com/xTestMeX/cube-world-mod-releases/releases/download/0.37.0-coop.preview.19/CubeWorldMod-Linux-x64.AppImage)
+- [Notas, pacotes e ficheiros de verificação](https://github.com/xTestMeX/cube-world-mod-releases/releases/tag/0.37.0-coop.preview.19)
 
 Cada pessoa precisa da sua própria instalação compatível do jogo. O download **não inclui Cube.exe, Server.exe, bases de dados originais ou saves**. O launcher verifica os executáveis antes de preparar uma cópia isolada. As DLLs do mod continuam x86, como exige o jogo original.
+
+## Construção de expedições — preview.19
+
+A preview.19 constrói as colunas do topo para baixo e agrupa o envio por zonas gráficas. Na receita completa, reduz as expansões de memória de 452 470 para 31 684, conservando geometria, dimensões e decoração. Estes números medem trabalho redundante, não FPS nem RAM simultânea.
+
+O cliente agrupa rajadas de alterações antes de reconstruir geometria e iluminação. Colisões e rede continuam imediatas; a confirmação de chegada exige a malha atualizada. Mantém os limites de envio e as melhorias de latência anteriores.
+
+Testes curtos, builds Windows/Linux, interface headless, assinaturas e hashes passaram sem abrir Cube.exe/Server.exe. **Os FPS reais continuam por confirmar**; uma reconstrução individual de iluminação em colunas altas ainda pode causar uma pausa.
+
+Para atualizar, todos fecham jogo e servidor, usam **Procurar atualizações** e fecham/reabrem o launcher. O anfitrião inicia uma sessão nova. Testar movimentação e abertura do inventário durante a preparação da expedição.
 
 ## Alt+Tab Windows e recuperação de expedições
 
