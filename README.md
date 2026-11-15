@@ -4,23 +4,27 @@ Mod comunitário para **Cube World Alpha de 23/07/2013**, com launcher **Windows
 
 ## Descarregar
 
-Versão pública experimental atual: **0.37.0-coop.preview.22**, launcher **0.2.21**.
+Versão pública experimental atual: **0.37.0-coop.preview.23**, launcher **0.2.22**.
 
-- [Windows x64 — launcher EXE](https://github.com/xTestMeX/cube-world-mod-releases/releases/download/0.37.0-coop.preview.22/CubeWorldMod-Windows-x64.exe)
-- [Linux x64 — AppImage](https://github.com/xTestMeX/cube-world-mod-releases/releases/download/0.37.0-coop.preview.22/CubeWorldMod-Linux-x64.AppImage)
-- [Notas, pacotes e ficheiros de verificação](https://github.com/xTestMeX/cube-world-mod-releases/releases/tag/0.37.0-coop.preview.22)
+- [Windows x64 — launcher EXE](https://github.com/xTestMeX/cube-world-mod-releases/releases/download/0.37.0-coop.preview.23/CubeWorldMod-Windows-x64.exe)
+- [Linux x64 — AppImage](https://github.com/xTestMeX/cube-world-mod-releases/releases/download/0.37.0-coop.preview.23/CubeWorldMod-Linux-x64.AppImage)
+- [Notas, pacotes e ficheiros de verificação](https://github.com/xTestMeX/cube-world-mod-releases/releases/tag/0.37.0-coop.preview.23)
 
 Cada pessoa precisa da sua própria instalação compatível do jogo. O download **não inclui Cube.exe, Server.exe, bases de dados originais ou saves**. O launcher verifica os executáveis antes de preparar uma cópia isolada. As DLLs do mod continuam x86, como exige o jogo original.
 
-## Chegada às expedições, fluidez e contador — preview.22
+## Teleporte das expedições e arrasto — preview.23
 
-Corrige uma regressão da preview.21: os bloqueios adicionais do mundo/terreno permaneciam detidos durante operações gráficas em que o motor original já os tinha libertado. A guarda mantém as colunas protegidas durante as leituras, libertando os bloqueios antes da fase gráfica. Elimina também cópias de memória repetidas por tile na validação de residência.
+Corrige a ordem dos bloqueios na descarga das zonas antigas após o teleporte: o worker podia segurar Terrain e esperar World, enquanto o thread principal segurava World e esperava Terrain. O percurso foi reproduzido nas instruções do executável, a partir dos registos de bloqueio da preview.22. A alteração mantém a remoção/destruição nativas e os escopos originais dos bloqueios.
 
-O HUD cooperativo mostra o tempo sincronizado com o anfitrião e o limite de **90 segundos por fase**: preparação do cenário e carregamento/validação da chegada. A preparação antes admitia 180 segundos. Abrir o painel não reinicia o contador.
+A zona vazia da barra de título do launcher passa a receber o arrasto. O texto/ícone, duplo clique e botões de minimizar/maximizar/fechar foram verificados por eventos de interface em ambiente headless. Mantém os contadores de 90 segundos por fase e o destino de cerca de 10 000 blocos.
 
-Testes isolados de locks, residência, ABI, instaladores, snapshot/religação, contador e cenário passaram, além dos pacotes Windows/Linux. **Não foi aberto Cube.exe/Server.exe; a resolução do crash real e o ganho de FPS ainda precisam de confirmação.** O diagnóstico adicional regista threads, espaço virtual, CPU e exceções quando necessário; não termina nem reinicia o jogo.
+Testes isolados de espera circular, rollback, zonas/regiões, transferência/regresso, dez etapas, recompensas, snapshot/religação e interface passaram. Ambos launchers compilados e pacotes assinados verificados. **Não foi aberto Cube.exe/Server.exe; a confirmação real da entrada na expedição e do movimento nativo da janela continua pendente.**
 
-Todos fecham jogo/servidor, atualizam e fecham/reabrem o launcher. Confirmar launcher **0.2.21** e mod **preview.22**, criar sessão nova e testar entrada/inventário. Se bloquear, aguardar 8–10 segundos antes de fechar e fornecer os registos do perfil `native-run.log`, `native-fault.log` e `classes-alpha.log`. O destino de cerca de 10 000 blocos, cenário, recompensas, configurações e saves mantêm-se.
+Todos fecham jogo/servidor, atualizam e fecham/reabrem o launcher. Confirmar launcher **0.2.22** e mod **preview.23**, criar sessão nova, arrastar a janela e testar entrada/inventário/extração após a primeira etapa. Se bloquear, aguardar 8–10 segundos antes de fechar e fornecer `native-run.log`, `native-fault.log` e `classes-alpha.log` da pasta do perfil.
+
+### Correções mantidas da preview.22
+
+A validação de terreno evita cópias de memória repetidas por tile, e os bloqueios adicionais do mesher são libertados antes da fase gráfica. O HUD cooperativo mostra idade sincronizada com o anfitrião e limite de **90 segundos por fase** para preparação e carregamento/validação da chegada. Diagnóstico adicional recolhe threads, memória virtual e exceções perante bloqueios. Configurações e saves preservados.
 
 ## Destino das expedições — preview.20
 
