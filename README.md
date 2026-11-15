@@ -4,13 +4,21 @@ Mod comunitário para **Cube World Alpha de 23/07/2013**, com launcher **Windows
 
 ## Descarregar
 
-Versão pública experimental atual: **0.37.0-coop.preview.26**, launcher **0.2.25**.
+Versão pública experimental atual: **0.37.0-coop.preview.27**, launcher **0.2.26**.
 
-- [Windows x64 — launcher EXE](https://github.com/xTestMeX/cube-world-mod-releases/releases/download/0.37.0-coop.preview.26/CubeWorldMod-Windows-x64.exe)
-- [Linux x64 — AppImage](https://github.com/xTestMeX/cube-world-mod-releases/releases/download/0.37.0-coop.preview.26/CubeWorldMod-Linux-x64.AppImage)
-- [Notas, pacotes e ficheiros de verificação](https://github.com/xTestMeX/cube-world-mod-releases/releases/tag/0.37.0-coop.preview.26)
+- [Windows x64 — launcher EXE](https://github.com/xTestMeX/cube-world-mod-releases/releases/download/0.37.0-coop.preview.27/CubeWorldMod-Windows-x64.exe)
+- [Linux x64 — AppImage](https://github.com/xTestMeX/cube-world-mod-releases/releases/download/0.37.0-coop.preview.27/CubeWorldMod-Linux-x64.AppImage)
+- [Notas, pacotes e ficheiros de verificação](https://github.com/xTestMeX/cube-world-mod-releases/releases/tag/0.37.0-coop.preview.27)
 
 Cada pessoa precisa da sua própria instalação compatível do jogo. O download **não inclui Cube.exe, Server.exe, bases de dados originais ou saves**. O launcher verifica os executáveis antes de preparar uma cópia isolada. As DLLs do mod continuam x86, como exige o jogo original.
+
+## Contagem inicial das expedições — preview.27
+
+A primeira ronda começa **10 segundos depois da chegada confirmada de todos os participantes**. O chat apresenta **10, 9…1** e anuncia o início. Funciona em solo e cooperativo; as rondas 2–10 continuam na mesma sala, sem repetir este atraso ou carregar novamente. O limite de transferência de 90 segundos é independente da contagem.
+
+Mantém a correção de terreno/teleporte da preview.26, cujo funcionamento foi entretanto confirmado pelo utilizador. Configurações, saves e limites de rede preservados. Testes curtos de solo, servidor, cliente/chat, cancelamento, religação, rondas contínuas, builds, emulação dos hooks e interface headless passaram. **A confirmação visual da nova contagem no jogo continua pendente.** Nenhum Cube.exe/Server.exe foi aberto pelo agente.
+
+Inclui launcher **0.2.26**, Windows x64 e Linux x64 AppImage. Todos devem fechar jogo e servidor, atualizar, fechar/reabrir o launcher e criar uma sessão nova no mesmo mundo. Anfitrião e convidados devem usar **preview.27**. Teste curto: observar a contagem antes dos inimigos, concluir a primeira ronda e continuar para a segunda sem repetir a contagem.
 
 ## Terreno 9/9 sem teleporte — preview.26
 
