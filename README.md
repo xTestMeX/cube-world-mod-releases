@@ -4,23 +4,35 @@ Mod comunitário para **Cube World Alpha de 23/07/2013**, com launcher **Windows
 
 ## Descarregar
 
-Versão pública experimental atual: **0.37.0-coop.preview.23**, launcher **0.2.22**.
+Versão pública experimental atual: **0.37.0-coop.preview.24**, launcher **0.2.23**.
 
-- [Windows x64 — launcher EXE](https://github.com/xTestMeX/cube-world-mod-releases/releases/download/0.37.0-coop.preview.23/CubeWorldMod-Windows-x64.exe)
-- [Linux x64 — AppImage](https://github.com/xTestMeX/cube-world-mod-releases/releases/download/0.37.0-coop.preview.23/CubeWorldMod-Linux-x64.AppImage)
-- [Notas, pacotes e ficheiros de verificação](https://github.com/xTestMeX/cube-world-mod-releases/releases/tag/0.37.0-coop.preview.23)
+- [Windows x64 — launcher EXE](https://github.com/xTestMeX/cube-world-mod-releases/releases/download/0.37.0-coop.preview.24/CubeWorldMod-Windows-x64.exe)
+- [Linux x64 — AppImage](https://github.com/xTestMeX/cube-world-mod-releases/releases/download/0.37.0-coop.preview.24/CubeWorldMod-Linux-x64.AppImage)
+- [Notas, pacotes e ficheiros de verificação](https://github.com/xTestMeX/cube-world-mod-releases/releases/tag/0.37.0-coop.preview.24)
 
 Cada pessoa precisa da sua própria instalação compatível do jogo. O download **não inclui Cube.exe, Server.exe, bases de dados originais ou saves**. O launcher verifica os executáveis antes de preparar uma cópia isolada. As DLLs do mod continuam x86, como exige o jogo original.
 
-## Teleporte das expedições e arrasto — preview.23
+## Rondas contínuas e arena reutilizável — preview.24
+
+As dez rondas decorrem no mesmo salão. **Continuar** avança diretamente para a próxima vaga, mantendo posição e confirmação do cenário, sem novo teleporte ou preparação. Bosses continuam nas rondas 5 e 10; a extração individual e o saque em risco mantêm-se.
+
+A arena cooperativa fica guardada por mundo e slot, até quatro arenas. Depois da primeira construção confirmada, as tentativas seguintes reutilizam a geometria e as coordenadas, incluindo após reabrir o servidor. Os inimigos, tentativas e recibos de prémios continuam independentes. Quando todos saem, liberta a grelha de construção e a reserva de carregamento; as zonas podem sair da memória.
+
+A gravação do terreno e do marcador reutilizável ocorre na mesma transação. Construções parciais e registos antigos sem confirmação seguem a limpeza anterior: a primeira entrada após atualizar pode construir uma vez. A entrada/religação continua a carregar e validar zonas; entre rondas deixa de o fazer. O destino reutilizado fica fixo no mundo, aproximadamente 10 000 blocos da primeira origem, podendo ficar mais longe de outra cidade.
+
+Testes curtos das dez rondas solo/cooperativas, votos, morte/desligação, extração, reutilização sem novas edições, reabertura e falhas transacionais passaram. Ambos launchers compilados e pacotes assinados verificados. Nenhum Cube.exe/Server.exe aberto. O utilizador confirmou o teleporte e primeira ronda da preview.23; **esta mudança ainda precisa de confirmação real em jogo**, sem medições de FPS.
+
+Todos fecham jogo/servidor, atualizam e fecham/reabrem o launcher. Confirmar launcher **0.2.23** e mod **preview.24**, criar sessão nova, passar da ronda 1 para a 2 sem carregar, extrair e iniciar outra tentativa. Repetir uma entrada após reabrir o servidor.
+
+### Correções mantidas da preview.23
 
 Corrige a ordem dos bloqueios na descarga das zonas antigas após o teleporte: o worker podia segurar Terrain e esperar World, enquanto o thread principal segurava World e esperava Terrain. O percurso foi reproduzido nas instruções do executável, a partir dos registos de bloqueio da preview.22. A alteração mantém a remoção/destruição nativas e os escopos originais dos bloqueios.
 
 A zona vazia da barra de título do launcher passa a receber o arrasto. O texto/ícone, duplo clique e botões de minimizar/maximizar/fechar foram verificados por eventos de interface em ambiente headless. Mantém os contadores de 90 segundos por fase e o destino de cerca de 10 000 blocos.
 
-Testes isolados de espera circular, rollback, zonas/regiões, transferência/regresso, dez etapas, recompensas, snapshot/religação e interface passaram. Ambos launchers compilados e pacotes assinados verificados. **Não foi aberto Cube.exe/Server.exe; a confirmação real da entrada na expedição e do movimento nativo da janela continua pendente.**
+Testes isolados de espera circular, rollback, zonas/regiões, transferência/regresso, dez etapas, recompensas, snapshot/religação e interface passaram. Ambos launchers compilados e pacotes assinados verificados. Não foi aberto Cube.exe/Server.exe pelo agente; o utilizador confirmou posteriormente a entrada e primeira ronda da preview.23. O movimento nativo da janela continua por confirmar.
 
-Todos fecham jogo/servidor, atualizam e fecham/reabrem o launcher. Confirmar launcher **0.2.22** e mod **preview.23**, criar sessão nova, arrastar a janela e testar entrada/inventário/extração após a primeira etapa. Se bloquear, aguardar 8–10 segundos antes de fechar e fornecer `native-run.log`, `native-fault.log` e `classes-alpha.log` da pasta do perfil.
+Se voltar a bloquear, aguardar 8–10 segundos antes de fechar e fornecer `native-run.log`, `native-fault.log` e `classes-alpha.log` da pasta do perfil.
 
 ### Correções mantidas da preview.22
 
@@ -30,7 +42,7 @@ A validação de terreno evita cópias de memória repetidas por tile, e os bloq
 
 As expedições cooperativas passam a cerca de **10 000 blocos de distância horizontal**, com o chão quatro blocos acima do sólido mais alto no local. A altura do jogador deixa de elevar a arena em 500 metros. O alinhamento à zona e a entrada de cada sala fazem variar ligeiramente a distância.
 
-Mantém as dez etapas, cenário, recompensas, remoção e regresso. Os quatro slots preferem direções distintas; os journals antigos conservam as coordenadas anteriores para limpeza. As otimizações da preview.19 continuam ativas. A alteração aplica-se ao servidor cooperativo; o percurso solo é independente.
+À data da preview.20, mantinha as dez etapas, cenário, recompensas, remoção e regresso. A preview.24 passa a conservar a arena e a realizar as rondas no mesmo salão. Os quatro slots preferem direções distintas; os journals antigos conservam as coordenadas anteriores para limpeza. As otimizações da preview.19 continuam ativas. A alteração aplica-se ao servidor cooperativo; o percurso solo é independente.
 
 Testes curtos de distância, terreno elevado, limites do mundo, destinos simultâneos, regresso, falhas e limpeza antiga passaram, além das compilações e verificações Windows/Linux. Nenhum Cube.exe/Server.exe foi aberto. **A melhoria real de FPS ainda precisa de confirmação**, incluindo possíveis picos no carregamento do destino.
 
