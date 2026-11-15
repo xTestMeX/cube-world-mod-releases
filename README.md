@@ -4,19 +4,21 @@ Mod comunitário para **Cube World Alpha de 23/07/2013**, com launcher **Windows
 
 ## Descarregar
 
-Versão pública experimental atual: **0.37.0-coop.preview.15**, launcher **0.2.14**.
+Versão pública experimental atual: **0.37.0-coop.preview.16**, launcher **0.2.15**.
 
-- [Windows x64 — launcher EXE](https://github.com/xTestMeX/cube-world-mod-releases/releases/download/0.37.0-coop.preview.15/CubeWorldMod-Windows-x64.exe)
-- [Linux x64 — AppImage](https://github.com/xTestMeX/cube-world-mod-releases/releases/download/0.37.0-coop.preview.15/CubeWorldMod-Linux-x64.AppImage)
-- [Notas, pacotes e ficheiros de verificação](https://github.com/xTestMeX/cube-world-mod-releases/releases/tag/0.37.0-coop.preview.15)
+- [Windows x64 — launcher EXE](https://github.com/xTestMeX/cube-world-mod-releases/releases/download/0.37.0-coop.preview.16/CubeWorldMod-Windows-x64.exe)
+- [Linux x64 — AppImage](https://github.com/xTestMeX/cube-world-mod-releases/releases/download/0.37.0-coop.preview.16/CubeWorldMod-Linux-x64.AppImage)
+- [Notas, pacotes e ficheiros de verificação](https://github.com/xTestMeX/cube-world-mod-releases/releases/tag/0.37.0-coop.preview.16)
 
 Cada pessoa precisa da sua própria instalação compatível do jogo. O download **não inclui Cube.exe, Server.exe, bases de dados originais ou saves**. O launcher verifica os executáveis antes de preparar uma cópia isolada. As DLLs do mod continuam x86, como exige o jogo original.
 
-## Correção do arranque Windows
+## Correção do arranque cooperativo Windows
 
-A preview.15 corrige verificações de código que recusavam o executável quando o Windows o carregava noutra base de memória (ASLR). Isso podia fechar o jogo durante a inicialização das missões e impedir classes, mapa, modelos e terreno de serem integrados. A correção respeita as relocações do executável exato, mantém ASLR ativo e não altera o Cube.exe. Conserva também a correção anterior do carregamento da DLL e a inicialização na thread da janela.
+A preview.16 corrige uma verificação que ainda recusava o arranque pelo convite quando o Windows carregava o jogo noutra base de memória (ASLR). O adaptador de rede passa a validar dois endereços IAT pela base real, mantendo o SHA-256 e os restantes bytes exatos. Conserva as correções anteriores das classes e do carregamento da DLL, sem alterar Cube.exe nem desativar ASLR.
 
-Quem viu o jogo abrir e fechar deve atualizar, fechar/reabrir o launcher e testar primeiro solo, depois cooperativo. Foram verificados oito instaladores reais e cinco trampolins/caves em programas Win32 próprios, além das assinaturas e compilações. Os testes isolados sob Proton não substituem a confirmação no PC Windows afetado. Os logs incluem a base real da imagem e a etapa de falha; as bibliotecas de rede mantêm as melhorias de latência anteriores.
+Os novos registos identificaram a rejeição no bootstrap nativo, antes das classes e da ligação ao mundo. A falha foi reproduzida e corrigida em duas bases de memória com o instalador real; os testes de ligação local, lock e preservação dos registos passaram. Mantêm-se as rotinas que melhoraram a latência e TCP_NODELAY. O servidor e as DLLs de gameplay não mudaram.
+
+Fecha jogo/servidor, atualiza e fecha/reabre o launcher. O convidado deve voltar a entrar pelo convite. A confirmação no Windows físico continua pendente; os testes isolados não substituem essa confirmação. Se voltar a falhar, recolhe `native-run.log`, `client-net.log`, `launcher-process.log` e `classes-alpha.log` da pasta do perfil. O novo `client-net.log` identifica a etapa interna e a base da imagem.
 
 ## Instalação
 
