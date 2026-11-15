@@ -4,13 +4,23 @@ Mod comunitário para **Cube World Alpha de 23/07/2013**, com launcher **Windows
 
 ## Descarregar
 
-Versão pública experimental atual: **0.37.0-coop.preview.28**, launcher **0.2.27**.
+Versão pública experimental atual: **0.37.0-coop.preview.29**, launcher **0.2.28**.
 
-- [Windows x64 — launcher EXE](https://github.com/xTestMeX/cube-world-mod-releases/releases/download/0.37.0-coop.preview.28/CubeWorldMod-Windows-x64.exe)
-- [Linux x64 — AppImage](https://github.com/xTestMeX/cube-world-mod-releases/releases/download/0.37.0-coop.preview.28/CubeWorldMod-Linux-x64.AppImage)
-- [Notas, pacotes e ficheiros de verificação](https://github.com/xTestMeX/cube-world-mod-releases/releases/tag/0.37.0-coop.preview.28)
+- [Windows x64 — launcher EXE](https://github.com/xTestMeX/cube-world-mod-releases/releases/download/0.37.0-coop.preview.29/CubeWorldMod-Windows-x64.exe)
+- [Linux x64 — AppImage](https://github.com/xTestMeX/cube-world-mod-releases/releases/download/0.37.0-coop.preview.29/CubeWorldMod-Linux-x64.AppImage)
+- [Notas, pacotes e ficheiros de verificação](https://github.com/xTestMeX/cube-world-mod-releases/releases/tag/0.37.0-coop.preview.29)
 
 Cada pessoa precisa da sua própria instalação compatível do jogo. O download **não inclui Cube.exe, Server.exe, bases de dados originais ou saves**. O launcher verifica os executáveis antes de preparar uma cópia isolada. As DLLs do mod continuam x86, como exige o jogo original.
+
+## Vampiro, Necromante e intervalo das expedições — preview.29
+
+O Vampiro recebe **20% de velocidade adicional enquanto flutua/voa** e a **cura da Explosão de Sangue é reduzida em 50%**, incluindo os pontos. Armas normais do Rogue e Presa da Noite são rejeitadas antes de equipar; mantém Garras Carmesim e Lâmina Sanguínea. Armas incompatíveis já equipadas voltam à mochila, com bloqueio dos ataques enquanto essa devolução estiver pendente. O Necromante precisa do primeiro ponto no respetivo nó da árvore X, seguido de Apply, para cada uma das quatro skills. M1/M2 e pontos existentes são conservados; o servidor valida os desbloqueios.
+
+As expedições cooperativas têm **45 minutos de cooldown individual ao terminar/sair**, contando apenas o tempo ligado ao servidor. O registo é persistente por personagem no anfitrião e partilhado entre os seus mundos; anfitriões diferentes têm registos próprios. F6 mostra o tempo restante. Saídas repetidas, fechar o jogo ou reiniciar o servidor não permitem contornar o intervalo. Convites/lobby cancelados e preparações falhadas antes do início não gastam o intervalo. A derrota que termina a participação conta como saída; a espera temporária por companheiros mantém as regras anteriores.
+
+Mantém os limites e frequências da rede/terreno, contagem inicial de dez segundos, rondas contínuas, arena reutilizável e correção das hornets. Testes curtos de regras, persistência, falhas de gravação, ligação/reabertura, interceções x86 e interface headless passaram. **O comportamento real em jogo continua por confirmar.** Nenhum Cube.exe/Server.exe foi aberto pelo agente.
+
+Inclui launcher **0.2.28**, Windows x64 e Linux x64 AppImage. Anfitrião e convidados fecham jogo/servidor, procuram atualizações, fecham/reabrem o launcher e iniciam uma nova sessão na **preview.29**. Teste curto: voar/aterrar e tentar uma arma Rogue; investir um ponto no Necromante; sair de uma expedição, observar F6, desligar e regressar para confirmar a pausa do cooldown.
 
 ## Hornets que ficavam paradas — preview.28
 
