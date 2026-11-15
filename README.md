@@ -4,13 +4,23 @@ Mod comunitário para **Cube World Alpha de 23/07/2013**, com launcher **Windows
 
 ## Descarregar
 
-Versão pública experimental atual: **0.37.0-coop.preview.19**, launcher **0.2.18**.
+Versão pública experimental atual: **0.37.0-coop.preview.20**, launcher **0.2.19**.
 
-- [Windows x64 — launcher EXE](https://github.com/xTestMeX/cube-world-mod-releases/releases/download/0.37.0-coop.preview.19/CubeWorldMod-Windows-x64.exe)
-- [Linux x64 — AppImage](https://github.com/xTestMeX/cube-world-mod-releases/releases/download/0.37.0-coop.preview.19/CubeWorldMod-Linux-x64.AppImage)
-- [Notas, pacotes e ficheiros de verificação](https://github.com/xTestMeX/cube-world-mod-releases/releases/tag/0.37.0-coop.preview.19)
+- [Windows x64 — launcher EXE](https://github.com/xTestMeX/cube-world-mod-releases/releases/download/0.37.0-coop.preview.20/CubeWorldMod-Windows-x64.exe)
+- [Linux x64 — AppImage](https://github.com/xTestMeX/cube-world-mod-releases/releases/download/0.37.0-coop.preview.20/CubeWorldMod-Linux-x64.AppImage)
+- [Notas, pacotes e ficheiros de verificação](https://github.com/xTestMeX/cube-world-mod-releases/releases/tag/0.37.0-coop.preview.20)
 
 Cada pessoa precisa da sua própria instalação compatível do jogo. O download **não inclui Cube.exe, Server.exe, bases de dados originais ou saves**. O launcher verifica os executáveis antes de preparar uma cópia isolada. As DLLs do mod continuam x86, como exige o jogo original.
+
+## Destino das expedições — preview.20
+
+As expedições cooperativas passam a cerca de **10 000 blocos de distância horizontal**, com o chão quatro blocos acima do sólido mais alto no local. A altura do jogador deixa de elevar a arena em 500 metros. O alinhamento à zona e a entrada de cada sala fazem variar ligeiramente a distância.
+
+Mantém as dez etapas, cenário, recompensas, remoção e regresso. Os quatro slots preferem direções distintas; os journals antigos conservam as coordenadas anteriores para limpeza. As otimizações da preview.19 continuam ativas. A alteração aplica-se ao servidor cooperativo; o percurso solo é independente.
+
+Testes curtos de distância, terreno elevado, limites do mundo, destinos simultâneos, regresso, falhas e limpeza antiga passaram, além das compilações e verificações Windows/Linux. Nenhum Cube.exe/Server.exe foi aberto. **A melhoria real de FPS ainda precisa de confirmação**, incluindo possíveis picos no carregamento do destino.
+
+Todos fecham jogo/servidor, atualizam e fecham/reabrem o launcher. Criar sessão nova, iniciar uma expedição F6 e testar movimentação/inventário durante preparação, entrada e extração.
 
 ## Construção de expedições — preview.19
 
@@ -32,7 +42,7 @@ Testes isolados de dispositivo perdido/restauro, religação, prémios, builds e
 
 ## Expedições próximas e desempenho
 
-A preview.17 coloca a arena cooperativa na zona próxima do organizador, pelo menos **500 metros acima da entrada**, em vez de teleportar para milhões de metros. Mantém as dez salas e a decoração. A limpeza espera pelo regresso dos jogadores; um journal permite retomar a remoção após interrupção. A implementação solo anterior mantém-se separada.
+Até à preview.19, a preview.17 colocava a arena cooperativa na zona próxima do organizador, pelo menos **500 metros acima da entrada**, em vez de teleportar para milhões de metros. Mantém as dez salas e a decoração. A limpeza espera pelo regresso dos jogadores; um journal permite retomar a remoção após interrupção. A implementação solo anterior mantém-se separada.
 
 A compactação seletiva do histórico impede acumular repetidamente as mesmas ações de construção/remoção. Preserva alterações alheias e mantém a sincronização limitada a 1024 ações por jogador/tick. O arranque Windows foi confirmado pelo utilizador na preview.16 e as respetivas correções mantêm-se.
 
