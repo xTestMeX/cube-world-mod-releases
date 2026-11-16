@@ -4,13 +4,27 @@ Mod comunitário para **Cube World Alpha de 23/07/2013**, com launcher **Windows
 
 ## Descarregar
 
-Versão pública experimental atual: **0.37.0-coop.preview.30**, launcher **0.2.29**.
+Versão pública experimental atual: **0.37.0-coop.preview.31**, launcher **0.2.30**.
 
-- [Windows x64 — launcher EXE](https://github.com/xTestMeX/cube-world-mod-releases/releases/download/0.37.0-coop.preview.30/CubeWorldMod-Windows-x64.exe)
-- [Linux x64 — AppImage](https://github.com/xTestMeX/cube-world-mod-releases/releases/download/0.37.0-coop.preview.30/CubeWorldMod-Linux-x64.AppImage)
-- [Notas, pacotes e ficheiros de verificação](https://github.com/xTestMeX/cube-world-mod-releases/releases/tag/0.37.0-coop.preview.30)
+- [Windows x64 — launcher EXE](https://github.com/xTestMeX/cube-world-mod-releases/releases/download/0.37.0-coop.preview.31/CubeWorldMod-Windows-x64.exe)
+- [Linux x64 — AppImage](https://github.com/xTestMeX/cube-world-mod-releases/releases/download/0.37.0-coop.preview.31/CubeWorldMod-Linux-x64.AppImage)
+- [Notas, pacotes e ficheiros de verificação](https://github.com/xTestMeX/cube-world-mod-releases/releases/tag/0.37.0-coop.preview.31)
 
 Cada pessoa precisa da sua própria instalação compatível do jogo. O download **não inclui Cube.exe, Server.exe, bases de dados originais ou saves**. O launcher verifica os executáveis antes de preparar uma cópia isolada. As DLLs do mod continuam x86, como exige o jogo original.
+
+## Necromante, relíquia e HUDs — preview.31
+
+Corrige o clique de **F6 → Fechar** que escapava para ataques nativos do Mage. O **Cajado Ossário** passa a usar a transformação da mão no desenho, sem provocar um ataque nativo. O M1 ganha a aquisição em falta de inimigos e objetos destrutíveis baixos, verifica linha de visão e atualiza o **contador de combo nativo** apenas quando causa dano.
+
+Convidados podem recolher a relíquia através da validação automática do servidor: a oferta e o pedido passam a comparar a mesma identidade pública do local. Guardas, distância, gravação e proteção contra duplicações continuam obrigatórios.
+
+Os baús entregam as **armas aleatórias sem o HUD de 0 XP/0 cobre**. Os atributos gerados pelo jogo são preservados, incluindo nas variantes novas. Corrige o apoio de baús, barris e caixas nas ruínas, conservando índices, estados, ciclos e recibos. Inimigos das estruturas usam o poder nativo **+1/+2**; bosses recebem +2.
+
+Os indicadores **R** dos altares/baús mostram os estados disponível, protegido ou já usado. O marcador do prisioneiro acompanha a matriz desenhada em cada frame, conservando o movimento fracionário mesmo com a precisão do D3D9. Mantém o fundo preto a 75% e os intervalos de rede existentes.
+
+**Atualizar:** anfitrião e convidados fecham o jogo e o servidor, usam **Procurar atualizações**, deixam o launcher reiniciar e confirmam **launcher 0.2.30 / mod preview.31** antes de criar uma sessão nova. Não é necessário um mundo novo. Mantém arena reutilizável, rondas contínuas, contagem inicial de dez segundos e cooldown individual de 45 minutos.
+
+Testes curtos de produção, instruções x86, desenho headless, recibos/rollback, loot, religação e rondas passaram. Ambos launchers foram compilados; manifestos Ed25519 e hashes verificados. Nenhum Cube.exe/Server.exe foi aberto pelo agente. **A confirmação visual e de gameplay entre computadores continua a depender dos jogadores.**
 
 ## Guardas, armas e correções cooperativas — preview.30
 
