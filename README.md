@@ -4,13 +4,21 @@ Mod comunitário para **Cube World Alpha de 23/07/2013**, com launcher **Windows
 
 ## Descarregar
 
-Versão pública experimental atual: **0.37.0-coop.preview.32**, launcher **0.2.31**.
+Versão pública experimental atual: **0.37.0-coop.preview.33**, launcher **0.2.32**.
 
-- [Windows x64 — launcher EXE](https://github.com/xTestMeX/cube-world-mod-releases/releases/download/0.37.0-coop.preview.32/CubeWorldMod-Windows-x64.exe)
-- [Linux x64 — AppImage](https://github.com/xTestMeX/cube-world-mod-releases/releases/download/0.37.0-coop.preview.32/CubeWorldMod-Linux-x64.AppImage)
-- [Notas, pacotes e ficheiros de verificação](https://github.com/xTestMeX/cube-world-mod-releases/releases/tag/0.37.0-coop.preview.32)
+- [Windows x64 — launcher EXE](https://github.com/xTestMeX/cube-world-mod-releases/releases/download/0.37.0-coop.preview.33/CubeWorldMod-Windows-x64.exe)
+- [Linux x64 — AppImage](https://github.com/xTestMeX/cube-world-mod-releases/releases/download/0.37.0-coop.preview.33/CubeWorldMod-Linux-x64.AppImage)
+- [Notas, pacotes e ficheiros de verificação](https://github.com/xTestMeX/cube-world-mod-releases/releases/tag/0.37.0-coop.preview.33)
 
 Cada pessoa precisa da sua própria instalação compatível do jogo. O download **não inclui Cube.exe, Server.exe, bases de dados originais ou saves**. O launcher verifica os executáveis antes de preparar uma cópia isolada. As DLLs do mod continuam x86, como exige o jogo original.
+
+## Correção do arranque cooperativo — preview.33
+
+Corrige as validações do servidor que usavam endereços absolutos da base preferida e rejeitavam o executável quando relocava (ASLR). Mantém o hash completo, os opcodes e operandos exatos. O launcher só aceita o estado da instância atual, com as portas esperadas; ficheiros antigos ou parciais deixam de autorizar a entrada. Falhas de ligação ao nativo recebem uma recusa clara, em vez de «Unable to read beyond the end of the stream», e novos registos identificam a fase de arranque.
+
+**Atualizar:** anfitrião e convidados fecham jogo/servidor, procuram atualizações, deixam o launcher reiniciar e confirmam **launcher 0.2.32 / mod preview.33** antes de criar uma sessão nova no mesmo mundo. Não exige outro mundo ou perfil. Configurações, saves, conteúdo e intervalos de rede/geração mantidos.
+
+Testes curtos com o export real da DLL sobre dados PE relocados, configuração ativa copiada e instruções corrompidas; handshake TLS, estados antigos/parciais, portas divergentes e libertação de slots; builds dos dois launchers, interface headless, assinaturas Ed25519 e hashes verificados. **Nenhum Cube.exe/Server.exe foi aberto pelo agente.** Os registos antigos não identificam a fase interna/base: não demonstram que ASLR foi a causa daquela execução específica. O arranque real desta correção continua a precisar de confirmação dos jogadores.
 
 ## Edifícios completos e carregamento coordenado — preview.32
 
