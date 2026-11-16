@@ -4,13 +4,23 @@ Mod comunitário para **Cube World Alpha de 23/07/2013**, com launcher **Windows
 
 ## Descarregar
 
-Versão pública experimental atual: **0.37.0-coop.preview.31**, launcher **0.2.30**.
+Versão pública experimental atual: **0.37.0-coop.preview.32**, launcher **0.2.31**.
 
-- [Windows x64 — launcher EXE](https://github.com/xTestMeX/cube-world-mod-releases/releases/download/0.37.0-coop.preview.31/CubeWorldMod-Windows-x64.exe)
-- [Linux x64 — AppImage](https://github.com/xTestMeX/cube-world-mod-releases/releases/download/0.37.0-coop.preview.31/CubeWorldMod-Linux-x64.AppImage)
-- [Notas, pacotes e ficheiros de verificação](https://github.com/xTestMeX/cube-world-mod-releases/releases/tag/0.37.0-coop.preview.31)
+- [Windows x64 — launcher EXE](https://github.com/xTestMeX/cube-world-mod-releases/releases/download/0.37.0-coop.preview.32/CubeWorldMod-Windows-x64.exe)
+- [Linux x64 — AppImage](https://github.com/xTestMeX/cube-world-mod-releases/releases/download/0.37.0-coop.preview.32/CubeWorldMod-Linux-x64.AppImage)
+- [Notas, pacotes e ficheiros de verificação](https://github.com/xTestMeX/cube-world-mod-releases/releases/tag/0.37.0-coop.preview.32)
 
 Cada pessoa precisa da sua própria instalação compatível do jogo. O download **não inclui Cube.exe, Server.exe, bases de dados originais ou saves**. O launcher verifica os executáveis antes de preparar uma cópia isolada. As DLLs do mod continuam x86, como exige o jogo original.
+
+## Edifícios completos e carregamento coordenado — preview.32
+
+Prepara as malhas das estruturas separadamente e publica o conjunto entre frames, incluindo locais que partilham chunks. Verifica os blocos efetivamente recebidos, decoração e habitantes esperados; os NPCs conservam a ativação por proximidade. A entrada no local e o combate são coordenados com a confirmação de cada jogador.
+
+Antecipa pesquisa e replay em zonas carregadas e apresenta a fase de preparação ao chegar diretamente a um edifício incompleto. Revalida após reentrada, religação e reset gráfico; ranks/passivas não reiniciam o cenário. O levantamento do terreno evita cópias de memória por voxel e aplica pausa adaptativa, mantendo os limites de edição/replay.
+
+**Atualizar:** anfitrião e convidados fecham jogo e servidor, procuram atualizações, deixam o launcher reiniciar e confirmam **launcher 0.2.31 / mod preview.32** antes de criar uma sessão nova. Não exige um mundo novo. Configurações, saves, recompensas e regras das expedições conservados.
+
+Compilações, testes curtos x86 de publicação/ownership/reset/colunas/religação/quatro jogadores, testes .NET, interface headless, assinaturas Ed25519 e hashes verificados. Nenhum Cube.exe/Server.exe foi aberto pelo agente. **O aspeto, IA e desempenho reais continuam por confirmar pelos jogadores.** Esta versão conserva o replay nativo; não promete criação instantânea nem aceleração de 10×.
 
 ## Necromante, relíquia e HUDs — preview.31
 
