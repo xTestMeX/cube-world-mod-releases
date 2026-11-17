@@ -4,13 +4,21 @@ Mod comunitário para **Cube World Alpha de 23/07/2013**, com launcher **Windows
 
 ## Descarregar
 
-Versão pública experimental atual: **0.37.0-coop.preview.33**, launcher **0.2.32**.
+Versão pública experimental atual: **0.37.0-coop.preview.34**, launcher **0.2.33**.
 
-- [Windows x64 — launcher EXE](https://github.com/xTestMeX/cube-world-mod-releases/releases/download/0.37.0-coop.preview.33/CubeWorldMod-Windows-x64.exe)
-- [Linux x64 — AppImage](https://github.com/xTestMeX/cube-world-mod-releases/releases/download/0.37.0-coop.preview.33/CubeWorldMod-Linux-x64.AppImage)
-- [Notas, pacotes e ficheiros de verificação](https://github.com/xTestMeX/cube-world-mod-releases/releases/tag/0.37.0-coop.preview.33)
+- [Windows x64 — launcher EXE](https://github.com/xTestMeX/cube-world-mod-releases/releases/download/0.37.0-coop.preview.34/CubeWorldMod-Windows-x64.exe)
+- [Linux x64 — AppImage](https://github.com/xTestMeX/cube-world-mod-releases/releases/download/0.37.0-coop.preview.34/CubeWorldMod-Linux-x64.AppImage)
+- [Notas, pacotes e ficheiros de verificação](https://github.com/xTestMeX/cube-world-mod-releases/releases/tag/0.37.0-coop.preview.34)
 
 Cada pessoa precisa da sua própria instalação compatível do jogo. O download **não inclui Cube.exe, Server.exe, bases de dados originais ou saves**. O launcher verifica os executáveis antes de preparar uma cópia isolada. As DLLs do mod continuam x86, como exige o jogo original.
+
+## Correção de classes e skills — preview.34
+
+Corrige respostas de estruturas que podiam sobrescrever o estado de combate, ranks e party, e a captura de entrada que apagava IDs de habilidades nativas. Necromante e Vampiro passam a usar a identidade confirmada por ator/UUID; o anfitrião recupera a classe especial já aceite, conservando ranks, passivas e revisões, sem permitir trocar de personagem/classe. O desenho consulta apenas uma cópia limitada do estado, sem pedidos adicionais de rede ou espera no worker.
+
+**Atualizar:** anfitrião e convidados fecham jogo/servidor, procuram atualizações e deixam o launcher reiniciar. Confirmem **launcher 0.2.33 / mod preview.34** antes de criar uma sessão nova no mesmo mundo. Não exige outro mundo ou perfil. Configurações, equilíbrio e cadência de rede mantidos.
+
+Os testes curtos antes/depois reproduzem as falhas do worker, assinaturas de classe e tecla 1; incluem quatro atores/seis classes, recuperação de UUID/ranks, F6/Fechar, voo/descida, suite .NET/TLS/UI, builds x86 e pacotes assinados. Nenhum Cube.exe/Server.exe foi aberto. **A confirmação real de skills e aparência entre jogadores em Windows/Proton continua pendente.**
 
 ## Correção do arranque cooperativo — preview.33
 
