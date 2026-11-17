@@ -4,13 +4,21 @@ Mod comunitário para **Cube World Alpha de 23/07/2013**, com launcher **Windows
 
 ## Descarregar
 
-Versão pública experimental atual: **0.37.0-coop.preview.37**, launcher **0.2.36**.
+Versão pública experimental atual: **0.37.0-coop.preview.38**, launcher **0.2.37**.
 
-- [Windows x64 — launcher EXE](https://github.com/xTestMeX/cube-world-mod-releases/releases/download/0.37.0-coop.preview.37/CubeWorldMod-Windows-x64.exe)
-- [Linux x64 — AppImage](https://github.com/xTestMeX/cube-world-mod-releases/releases/download/0.37.0-coop.preview.37/CubeWorldMod-Linux-x64.AppImage)
-- [Notas, pacotes e ficheiros de verificação](https://github.com/xTestMeX/cube-world-mod-releases/releases/tag/0.37.0-coop.preview.37)
+- [Windows x64 — launcher EXE](https://github.com/xTestMeX/cube-world-mod-releases/releases/download/0.37.0-coop.preview.38/CubeWorldMod-Windows-x64.exe)
+- [Linux x64 — AppImage](https://github.com/xTestMeX/cube-world-mod-releases/releases/download/0.37.0-coop.preview.38/CubeWorldMod-Linux-x64.AppImage)
+- [Notas, pacotes e ficheiros de verificação](https://github.com/xTestMeX/cube-world-mod-releases/releases/tag/0.37.0-coop.preview.38)
 
 Cada pessoa precisa da sua própria instalação compatível do jogo. O download **não inclui Cube.exe, Server.exe, bases de dados originais ou saves**. O launcher verifica os executáveis antes de preparar uma cópia isolada. As DLLs do mod continuam x86, como exige o jogo original.
+
+## Carregamento dos acampamentos — preview.38
+
+Corrige a recusa do modelo da porta da jaula, que podia deixar um acampamento preso em «Local em preparação». O modelo da porta torna a carregar em solo e em cooperativo, com o mesmo limite de memória por modelo.
+
+Para atualizar, fecha o jogo e o servidor e escolhe **Procurar atualizações** no launcher. Confirma que tens o launcher **0.2.37** e o mod **preview.38**. Podes voltar ao mesmo mundo.
+
+Os testes com as DLLs distribuídas confirmaram a construção das cinco malhas da jaula. A verificação visual no local afetado continua pendente.
 
 ## Jaula, baús e preparação dos locais — preview.37
 
