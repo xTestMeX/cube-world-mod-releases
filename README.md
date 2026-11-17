@@ -4,13 +4,25 @@ Mod comunitário para **Cube World Alpha de 23/07/2013**, com launcher **Windows
 
 ## Descarregar
 
-Versão pública experimental atual: **0.37.0-coop.preview.36**, launcher **0.2.35**.
+Versão pública experimental atual: **0.37.0-coop.preview.37**, launcher **0.2.36**.
 
-- [Windows x64 — launcher EXE](https://github.com/xTestMeX/cube-world-mod-releases/releases/download/0.37.0-coop.preview.36/CubeWorldMod-Windows-x64.exe)
-- [Linux x64 — AppImage](https://github.com/xTestMeX/cube-world-mod-releases/releases/download/0.37.0-coop.preview.36/CubeWorldMod-Linux-x64.AppImage)
-- [Notas, pacotes e ficheiros de verificação](https://github.com/xTestMeX/cube-world-mod-releases/releases/tag/0.37.0-coop.preview.36)
+- [Windows x64 — launcher EXE](https://github.com/xTestMeX/cube-world-mod-releases/releases/download/0.37.0-coop.preview.37/CubeWorldMod-Windows-x64.exe)
+- [Linux x64 — AppImage](https://github.com/xTestMeX/cube-world-mod-releases/releases/download/0.37.0-coop.preview.37/CubeWorldMod-Linux-x64.AppImage)
+- [Notas, pacotes e ficheiros de verificação](https://github.com/xTestMeX/cube-world-mod-releases/releases/tag/0.37.0-coop.preview.37)
 
 Cada pessoa precisa da sua própria instalação compatível do jogo. O download **não inclui Cube.exe, Server.exe, bases de dados originais ou saves**. O launcher verifica os executáveis antes de preparar uma cópia isolada. As DLLs do mod continuam x86, como exige o jogo original.
+
+## Jaula, baús e preparação dos locais — preview.37
+
+Corrige o desaparecimento da jaula após Alt+Tab: locais já publicados conservam a prontidão durante o reset gráfico. Pedidos repetidos ou atrasados deixam de rebaixar uma estrutura pronta e de voltar a ativar a proteção que podia expulsar o jogador.
+
+A porta tem eixo e encaixe corrigidos e abre para fora. O prisioneiro fica ancorado e protegido, sem combater, até ser libertado. No cooperativo, **R** permite fechar/reabrir baús já saqueados e a porta libertada, sem duplicar recompensas. Mantém-se **um saque partilhado por baú/ciclo**, entregue diretamente no inventário, com aviso de cada arma no chat. Sem HUD de XP/moedas. A fogueira de um acampamento limpo deixa de oferecer outras missões.
+
+**Atualizar:** anfitrião e convidados fecham jogo e servidor, usam **Procurar atualizações** e deixam o launcher reiniciar. Confirmem **launcher 0.2.36 / mod preview.37** antes de voltar à sessão. Não exige mundo nem perfil novos. Configurações e saves preservados.
+
+Testes curtos de publicação/Alt+Tab, IA, renderer/matrizes x86, quatro orientações, layouts, saque único, fechar/reabrir e falhas de gravação passaram, com builds Windows/Linux, .NET/TLS/UI, assinatura Ed25519 e hashes. Não foi aberto Cube.exe/Server.exe. **Aspeto GPU e gameplay real Windows/Proton precisam de confirmação dos jogadores.** Não se promete eliminar todo o lag: o status inclui métricas leves para investigar se voltar a bloquear.
+
+Render distance: opções acima de 100% funcionam nas verificações, mas o detalhe no cooperativo continua limitado pela configuração **TerrainReach=768**. Este update não aumenta a carga do terreno nem as taxas de rede.
 
 ## Jaula física e revisão do mod — preview.36
 
