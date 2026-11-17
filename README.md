@@ -4,13 +4,23 @@ Mod comunitário para **Cube World Alpha de 23/07/2013**, com launcher **Windows
 
 ## Descarregar
 
-Versão pública experimental atual: **0.37.0-coop.preview.34**, launcher **0.2.33**.
+Versão pública experimental atual: **0.37.0-coop.preview.36**, launcher **0.2.35**.
 
-- [Windows x64 — launcher EXE](https://github.com/xTestMeX/cube-world-mod-releases/releases/download/0.37.0-coop.preview.34/CubeWorldMod-Windows-x64.exe)
-- [Linux x64 — AppImage](https://github.com/xTestMeX/cube-world-mod-releases/releases/download/0.37.0-coop.preview.34/CubeWorldMod-Linux-x64.AppImage)
-- [Notas, pacotes e ficheiros de verificação](https://github.com/xTestMeX/cube-world-mod-releases/releases/tag/0.37.0-coop.preview.34)
+- [Windows x64 — launcher EXE](https://github.com/xTestMeX/cube-world-mod-releases/releases/download/0.37.0-coop.preview.36/CubeWorldMod-Windows-x64.exe)
+- [Linux x64 — AppImage](https://github.com/xTestMeX/cube-world-mod-releases/releases/download/0.37.0-coop.preview.36/CubeWorldMod-Linux-x64.AppImage)
+- [Notas, pacotes e ficheiros de verificação](https://github.com/xTestMeX/cube-world-mod-releases/releases/tag/0.37.0-coop.preview.36)
 
 Cada pessoa precisa da sua própria instalação compatível do jogo. O download **não inclui Cube.exe, Server.exe, bases de dados originais ou saves**. O launcher verifica os executáveis antes de preparar uma cópia isolada. As DLLs do mod continuam x86, como exige o jogo original.
+
+## Jaula física e revisão do mod — preview.36
+
+A jaula dos prisioneiros passa a ser **mobiliário físico em madeira e ferro**, com modelos voxel próprios, interior oco, colisões e porta animada. Elimina os guardas e usa **R** para libertar o prisioneiro e aceitar a escolta; a porta só abre depois de guardar o resgate. O servidor confirma o estado para os convidados. Reabrir o mundo ou renovar o acampamento não duplica peças; mantém os índices dos baús, ciclos e recibos. Jaulas antigas reconhecidas são convertidas no mesmo local.
+
+Inclui a revisão transversal preparada anteriormente: correções de efeitos/dano cooperativo das classes e de precisão de coordenadas, isolamento dos acampamentos por mundo, patrulhas, suporte/terreno em novos altares, ruínas e torres, conclusão de escoltas e espera pela chegada do grupo entre rondas. O launcher recupera reparações interrompidas, preservando configurações e versões anteriores.
+
+**Atualizar:** anfitrião e convidados fecham jogo e servidor, usam **Procurar atualizações** e deixam o launcher reiniciar. Confirmem **launcher 0.2.35 / mod preview.36** antes da sessão nova. Não exige outro mundo ou perfil. Configurações e saves mantidos; o port Vulkan permanece separado.
+
+Testes curtos das instruções originais de colisão/gravação, quatro orientações da porta, prefixos de objetos, resgate, reabertura e 192 layouts passaram, juntamente com compilações Windows/Linux, testes .NET/TLS/UI, assinatura Ed25519 e hashes. Nenhum Cube.exe/Server.exe foi aberto. **A confirmação visual da jaula e a saída do prisioneiro em gameplay Windows/Proton continuam a depender dos jogadores.**
 
 ## Correção de classes e skills — preview.34
 
