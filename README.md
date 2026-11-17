@@ -4,11 +4,11 @@ Mod comunitário para **Cube World Alpha de 23/07/2013**, com launcher **Windows
 
 ## Descarregar
 
-Versão pública experimental atual: **0.37.0-coop.preview.39**, launcher **0.2.38**.
+Versão pública experimental atual: **0.37.0-coop.preview.41**, launcher **0.2.40**.
 
-- [Windows x64 — launcher EXE](https://github.com/xTestMeX/cube-world-mod-releases/releases/download/0.37.0-coop.preview.39/CubeWorldMod-Windows-x64.exe)
-- [Linux x64 — AppImage](https://github.com/xTestMeX/cube-world-mod-releases/releases/download/0.37.0-coop.preview.39/CubeWorldMod-Linux-x64.AppImage)
-- [Notas, pacotes e ficheiros de verificação](https://github.com/xTestMeX/cube-world-mod-releases/releases/tag/0.37.0-coop.preview.39)
+- [Windows x64 — launcher EXE](https://github.com/xTestMeX/cube-world-mod-releases/releases/download/0.37.0-coop.preview.41/CubeWorldMod-Windows-x64.exe)
+- [Linux x64 — AppImage](https://github.com/xTestMeX/cube-world-mod-releases/releases/download/0.37.0-coop.preview.41/CubeWorldMod-Linux-x64.AppImage)
+- [Notas, pacotes e ficheiros de verificação](https://github.com/xTestMeX/cube-world-mod-releases/releases/tag/0.37.0-coop.preview.41)
 
 Cada pessoa precisa da sua própria instalação compatível do jogo. O download **não inclui Cube.exe, Server.exe, bases de dados originais ou saves**. O launcher verifica os executáveis antes de preparar uma cópia isolada. As DLLs do mod continuam x86, como exige o jogo original.
 
