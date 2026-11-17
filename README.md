@@ -4,19 +4,23 @@ Mod comunitário para **Cube World Alpha de 23/07/2013**, com launcher **Windows
 
 ## Descarregar
 
-Versão pública experimental atual: **0.37.0-coop.preview.38**, launcher **0.2.37**.
+Versão pública experimental atual: **0.37.0-coop.preview.39**, launcher **0.2.38**.
 
-- [Windows x64 — launcher EXE](https://github.com/xTestMeX/cube-world-mod-releases/releases/download/0.37.0-coop.preview.38/CubeWorldMod-Windows-x64.exe)
-- [Linux x64 — AppImage](https://github.com/xTestMeX/cube-world-mod-releases/releases/download/0.37.0-coop.preview.38/CubeWorldMod-Linux-x64.AppImage)
-- [Notas, pacotes e ficheiros de verificação](https://github.com/xTestMeX/cube-world-mod-releases/releases/tag/0.37.0-coop.preview.38)
+- [Windows x64 — launcher EXE](https://github.com/xTestMeX/cube-world-mod-releases/releases/download/0.37.0-coop.preview.39/CubeWorldMod-Windows-x64.exe)
+- [Linux x64 — AppImage](https://github.com/xTestMeX/cube-world-mod-releases/releases/download/0.37.0-coop.preview.39/CubeWorldMod-Linux-x64.AppImage)
+- [Notas, pacotes e ficheiros de verificação](https://github.com/xTestMeX/cube-world-mod-releases/releases/tag/0.37.0-coop.preview.39)
 
 Cada pessoa precisa da sua própria instalação compatível do jogo. O download **não inclui Cube.exe, Server.exe, bases de dados originais ou saves**. O launcher verifica os executáveis antes de preparar uma cópia isolada. As DLLs do mod continuam x86, como exige o jogo original.
+
+## Escolta e saque partilhado — preview.39
+
+O dono da escolta pode abandoná-la no Diário. Os baús das estruturas largam 2 a 5 itens aleatórios no chão, num único saque por ciclo para todo o grupo. O prisioneiro fica protegido enquanto está preso. O piso da jaula foi ajustado e o servidor responde à interação já com o estado atualizado da porta.
+
+Para atualizar, fecha o jogo e o servidor e escolhe **Procurar atualizações** no launcher. Confirma que tens o launcher **0.2.38** e o mod **preview.39**. Podes voltar ao mesmo mundo.
 
 ## Carregamento dos acampamentos — preview.38
 
 Corrige a recusa do modelo da porta da jaula, que podia deixar um acampamento preso em «Local em preparação». O modelo da porta torna a carregar em solo e em cooperativo, com o mesmo limite de memória por modelo.
-
-Para atualizar, fecha o jogo e o servidor e escolhe **Procurar atualizações** no launcher. Confirma que tens o launcher **0.2.37** e o mod **preview.38**. Podes voltar ao mesmo mundo.
 
 Os testes com as DLLs distribuídas confirmaram a construção das cinco malhas da jaula. A verificação visual no local afetado continua pendente.
 
