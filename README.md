@@ -4,13 +4,21 @@ Mod comunitário para **Cube World Alpha de 23/07/2013**, com launcher **Windows
 
 ## Descarregar
 
-Versão pública experimental atual: **0.37.0-coop.preview.47**, launcher **0.2.46**.
+Versão pública experimental atual: **0.37.0-coop.preview.48**, launcher **0.2.47**.
 
-- [Windows x64 — launcher EXE](https://github.com/xTestMeX/cube-world-mod-releases/releases/download/0.37.0-coop.preview.47/CubeWorldMod-Windows-x64.exe)
-- [Linux x64 — AppImage](https://github.com/xTestMeX/cube-world-mod-releases/releases/download/0.37.0-coop.preview.47/CubeWorldMod-Linux-x64.AppImage)
-- [Notas, pacotes e ficheiros de verificação](https://github.com/xTestMeX/cube-world-mod-releases/releases/tag/0.37.0-coop.preview.47)
+- [Windows x64 — launcher EXE](https://github.com/xTestMeX/cube-world-mod-releases/releases/download/0.37.0-coop.preview.48/CubeWorldMod-Windows-x64.exe)
+- [Linux x64 — AppImage](https://github.com/xTestMeX/cube-world-mod-releases/releases/download/0.37.0-coop.preview.48/CubeWorldMod-Linux-x64.AppImage)
+- [Notas, pacotes e ficheiros de verificação](https://github.com/xTestMeX/cube-world-mod-releases/releases/tag/0.37.0-coop.preview.48)
 
 Cada pessoa precisa da sua própria instalação compatível do jogo. O download **não inclui Cube.exe, Server.exe, bases de dados originais ou saves**. O launcher verifica os executáveis antes de preparar uma cópia isolada. As DLLs do mod continuam x86, como exige o jogo original.
+
+## Estruturas em cooperativo e Armadilha de Caça na preview.48
+
+Os edifícios do mod começam a ser preparados durante a aproximação. O cliente apresenta o edifício em conjunto e verifica o chão, a decoração e os habitantes esperados antes de permitir a entrada. A meta dos 100 ms após o terreno ficar visível aguarda medição em jogo.
+
+A Armadilha de Caça do Scout deteta inimigos que atravessem o gatilho entre duas leituras, em solo e no cooperativo. Pode ficar no chão até seis segundos e imobilizar até três inimigos durante dois segundos.
+
+Fecha o jogo e o servidor e escolhe **Procurar atualizações**. O anfitrião e os convidados devem usar o mod **preview.48** e o launcher **0.2.47**.
 
 ## Carregamento das estruturas — preview.47
 
