@@ -4,13 +4,19 @@ Mod comunitário para **Cube World Alpha de 23/07/2013**, com launcher **Windows
 
 ## Descarregar
 
-Versão pública experimental atual: **0.37.0-coop.preview.45**, launcher **0.2.44**.
+Versão pública experimental atual: **0.37.0-coop.preview.47**, launcher **0.2.46**.
 
-- [Windows x64 — launcher EXE](https://github.com/xTestMeX/cube-world-mod-releases/releases/download/0.37.0-coop.preview.45/CubeWorldMod-Windows-x64.exe)
-- [Linux x64 — AppImage](https://github.com/xTestMeX/cube-world-mod-releases/releases/download/0.37.0-coop.preview.45/CubeWorldMod-Linux-x64.AppImage)
-- [Notas, pacotes e ficheiros de verificação](https://github.com/xTestMeX/cube-world-mod-releases/releases/tag/0.37.0-coop.preview.45)
+- [Windows x64 — launcher EXE](https://github.com/xTestMeX/cube-world-mod-releases/releases/download/0.37.0-coop.preview.47/CubeWorldMod-Windows-x64.exe)
+- [Linux x64 — AppImage](https://github.com/xTestMeX/cube-world-mod-releases/releases/download/0.37.0-coop.preview.47/CubeWorldMod-Linux-x64.AppImage)
+- [Notas, pacotes e ficheiros de verificação](https://github.com/xTestMeX/cube-world-mod-releases/releases/tag/0.37.0-coop.preview.47)
 
 Cada pessoa precisa da sua própria instalação compatível do jogo. O download **não inclui Cube.exe, Server.exe, bases de dados originais ou saves**. O launcher verifica os executáveis antes de preparar uma cópia isolada. As DLLs do mod continuam x86, como exige o jogo original.
+
+## Carregamento das estruturas — preview.47
+
+O cliente verifica os blocos da revisão recebida antes de apresentar a estrutura em conjunto. Se a zona sair da memória antes de a construção terminar, o servidor retoma o trabalho a partir das edições guardadas. A Armadilha de Caça do Scout assenta no chão e fica armada durante seis segundos ou até disparar.
+
+Fecha o jogo e o servidor e escolhe **Procurar atualizações** no launcher. No cooperativo, atualizem o anfitrião e os convidados para a preview.47. A velocidade de aparecimento dos edifícios continua por medir em jogo.
 
 ## Escolta e saque partilhado — preview.39
 
