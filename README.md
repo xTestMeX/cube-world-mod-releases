@@ -4,13 +4,19 @@ Mod comunitário para **Cube World Alpha de 23/07/2013**, com launcher **Windows
 
 ## Descarregar
 
-Versão pública experimental atual: **0.37.0-coop.preview.48**, launcher **0.2.47**.
+Versão pública experimental atual: **0.37.0-coop.preview.49**, launcher **0.2.48**.
 
-- [Windows x64 — launcher EXE](https://github.com/xTestMeX/cube-world-mod-releases/releases/download/0.37.0-coop.preview.48/CubeWorldMod-Windows-x64.exe)
-- [Linux x64 — AppImage](https://github.com/xTestMeX/cube-world-mod-releases/releases/download/0.37.0-coop.preview.48/CubeWorldMod-Linux-x64.AppImage)
-- [Notas, pacotes e ficheiros de verificação](https://github.com/xTestMeX/cube-world-mod-releases/releases/tag/0.37.0-coop.preview.48)
+- [Windows x64 — launcher EXE](https://github.com/xTestMeX/cube-world-mod-releases/releases/download/0.37.0-coop.preview.49/CubeWorldMod-Windows-x64.exe)
+- [Linux x64 — AppImage](https://github.com/xTestMeX/cube-world-mod-releases/releases/download/0.37.0-coop.preview.49/CubeWorldMod-Linux-x64.AppImage)
+- [Notas, pacotes e ficheiros de verificação](https://github.com/xTestMeX/cube-world-mod-releases/releases/tag/0.37.0-coop.preview.49)
 
 Cada pessoa precisa da sua própria instalação compatível do jogo. O download **não inclui Cube.exe, Server.exe, bases de dados originais ou saves**. O launcher verifica os executáveis antes de preparar uma cópia isolada. As DLLs do mod continuam x86, como exige o jogo original.
+
+## Chegada às estruturas — preview.49
+
+O cliente dá prioridade aos edifícios próximos e pede a decoração durante a aproximação. O anfitrião envia os blocos quando o terreno do cliente já os pode receber. Nos chunks intactos, o terreno original pode continuar visível enquanto o edifício é preparado.
+
+Com o jogo e o servidor fechados, abre o launcher ou escolhe **Procurar atualizações**. Atualiza o anfitrião e os convidados para o mod **preview.49** e o launcher **0.2.48**. Podes usar o mesmo mundo. O tempo de carregamento ainda será medido em jogo.
 
 ## Estruturas em cooperativo e Armadilha de Caça na preview.48
 
