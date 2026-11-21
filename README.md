@@ -4,13 +4,17 @@ Mod comunitário para **Cube World Alpha de 23/07/2013**, com launcher **Windows
 
 ## Descarregar
 
-Versão pública experimental atual: **0.37.0-coop.preview.66**, launcher **0.2.65**.
+Versão pública experimental atual: **0.37.0-coop.preview.68**, launcher **0.2.67**.
 
-- [Windows x64 — launcher EXE](https://github.com/xTestMeX/cube-world-mod-releases/releases/download/0.37.0-coop.preview.66/CubeWorldMod-Windows-x64.exe)
-- [Linux x64 — AppImage](https://github.com/xTestMeX/cube-world-mod-releases/releases/download/0.37.0-coop.preview.66/CubeWorldMod-Linux-x64.AppImage)
-- [Notas, pacotes e ficheiros de verificação](https://github.com/xTestMeX/cube-world-mod-releases/releases/tag/0.37.0-coop.preview.66)
+- [Windows x64 — launcher EXE](https://github.com/xTestMeX/cube-world-mod-releases/releases/download/0.37.0-coop.preview.68/CubeWorldMod-Windows-x64.exe)
+- [Linux x64 — AppImage](https://github.com/xTestMeX/cube-world-mod-releases/releases/download/0.37.0-coop.preview.68/CubeWorldMod-Linux-x64.AppImage)
+- [Notas, pacotes e ficheiros de verificação](https://github.com/xTestMeX/cube-world-mod-releases/releases/tag/0.37.0-coop.preview.68)
 
 Cada pessoa precisa da sua própria instalação compatível do jogo. O download **não inclui Cube.exe, Server.exe, bases de dados originais ou saves**. O launcher verifica os executáveis antes de preparar uma cópia isolada. As DLLs do mod continuam x86, como exige o jogo original.
+
+## Mapa e carregamento das estruturas · preview.68
+
+Em solo e cooperativo, o mapa termina a peça atual e cede o acesso ao terreno quando o desenho da paisagem ou a validação de um edifício precisa dele. A opção está ativa por defeito. Esta versão inclui também as correções à distância de visão, ao nível dos encontros e do saque e à Armadilha de Caça do Scout. A melhoria de fluidez em jogo ainda está por medir.
 
 ## Templo dos Magos · preview.66
 
