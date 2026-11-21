@@ -4,13 +4,19 @@ Mod comunitário para **Cube World Alpha de 23/07/2013**, com launcher **Windows
 
 ## Descarregar
 
-Versão pública experimental atual: **0.37.0-coop.preview.58**, launcher **0.2.57**.
+Versão pública experimental atual: **0.37.0-coop.preview.59**, launcher **0.2.58**.
 
-- [Windows x64 — launcher EXE](https://github.com/xTestMeX/cube-world-mod-releases/releases/download/0.37.0-coop.preview.58/CubeWorldMod-Windows-x64.exe)
-- [Linux x64 — AppImage](https://github.com/xTestMeX/cube-world-mod-releases/releases/download/0.37.0-coop.preview.58/CubeWorldMod-Linux-x64.AppImage)
-- [Notas, pacotes e ficheiros de verificação](https://github.com/xTestMeX/cube-world-mod-releases/releases/tag/0.37.0-coop.preview.58)
+- [Windows x64 — launcher EXE](https://github.com/xTestMeX/cube-world-mod-releases/releases/download/0.37.0-coop.preview.59/CubeWorldMod-Windows-x64.exe)
+- [Linux x64 — AppImage](https://github.com/xTestMeX/cube-world-mod-releases/releases/download/0.37.0-coop.preview.59/CubeWorldMod-Linux-x64.AppImage)
+- [Notas, pacotes e ficheiros de verificação](https://github.com/xTestMeX/cube-world-mod-releases/releases/tag/0.37.0-coop.preview.59)
 
 Cada pessoa precisa da sua própria instalação compatível do jogo. O download **não inclui Cube.exe, Server.exe, bases de dados originais ou saves**. O launcher verifica os executáveis antes de preparar uma cópia isolada. As DLLs do mod continuam x86, como exige o jogo original.
+
+## Entrada nos edifícios e preparação gráfica · preview.59
+
+Ao revisitar um edifício em cooperativo, o cliente recupera as partes que já estão desenhadas e volta a pedir a entrada assim que o setor está pronto. Em solo e cooperativo, a opção **Automático** utiliza a gráfica para preparar as faces opacas compatíveis e o relevo distante. Podes selecionar **Preparação pelo CPU** em **Configuração** para comparar a mesma rota.
+
+Fecha o jogo e o servidor e escolhe **Procurar atualizações**. O anfitrião e os convidados devem atualizar para a mesma versão.
 
 ## Estruturas e expedições em cooperativo · preview.58
 
