@@ -4,13 +4,19 @@ Mod comunitário para **Cube World Alpha de 23/07/2013**, com launcher **Windows
 
 ## Descarregar
 
-Versão pública experimental atual: **0.37.0-coop.preview.55**, launcher **0.2.54**.
+Versão pública experimental atual: **0.37.0-coop.preview.58**, launcher **0.2.57**.
 
-- [Windows x64 — launcher EXE](https://github.com/xTestMeX/cube-world-mod-releases/releases/download/0.37.0-coop.preview.55/CubeWorldMod-Windows-x64.exe)
-- [Linux x64 — AppImage](https://github.com/xTestMeX/cube-world-mod-releases/releases/download/0.37.0-coop.preview.55/CubeWorldMod-Linux-x64.AppImage)
-- [Notas, pacotes e ficheiros de verificação](https://github.com/xTestMeX/cube-world-mod-releases/releases/tag/0.37.0-coop.preview.55)
+- [Windows x64 — launcher EXE](https://github.com/xTestMeX/cube-world-mod-releases/releases/download/0.37.0-coop.preview.58/CubeWorldMod-Windows-x64.exe)
+- [Linux x64 — AppImage](https://github.com/xTestMeX/cube-world-mod-releases/releases/download/0.37.0-coop.preview.58/CubeWorldMod-Linux-x64.AppImage)
+- [Notas, pacotes e ficheiros de verificação](https://github.com/xTestMeX/cube-world-mod-releases/releases/tag/0.37.0-coop.preview.58)
 
 Cada pessoa precisa da sua própria instalação compatível do jogo. O download **não inclui Cube.exe, Server.exe, bases de dados originais ou saves**. O launcher verifica os executáveis antes de preparar uma cópia isolada. As DLLs do mod continuam x86, como exige o jogo original.
+
+## Estruturas e expedições em cooperativo · preview.58
+
+O exterior dos edifícios começa a ser preparado durante a aproximação. À entrada, o cliente confirma o chão, os objetos e os habitantes de cada setor. Nas expedições, a preparação do destino começa na cidade e a chegada é confirmada depois do teleporte. O tempo de aparecimento e a fluidez continuam por medir em jogo.
+
+Para atualizar, fechem o jogo e o servidor e escolham **Procurar atualizações** no launcher. O anfitrião e os convidados devem usar a mesma versão.
 
 ## Reenvio de blocos das estruturas — preview.55
 
