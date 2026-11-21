@@ -1,16 +1,23 @@
+Warning: truncated output (original token count: 10062)
+Total output lines: 323
+
 # Cube World Mod — launcher e atualizações
 
 Mod comunitário para **Cube World Alpha de 23/07/2013**, com launcher **Windows x64** e **Linux x64 AppImage**. Port Vulkan separado e não incluído.
 
 ## Descarregar
 
-Versão pública experimental atual: **0.37.0-coop.preview.69**, launcher **0.2.68**.
+Versão pública experimental atual: **0.37.0-coop.preview.70**, launcher **0.2.69**.
 
-- [Windows x64 — launcher EXE](https://github.com/xTestMeX/cube-world-mod-releases/releases/download/0.37.0-coop.preview.69/CubeWorldMod-Windows-x64.exe)
-- [Linux x64 — AppImage](https://github.com/xTestMeX/cube-world-mod-releases/releases/download/0.37.0-coop.preview.69/CubeWorldMod-Linux-x64.AppImage)
-- [Notas, pacotes e ficheiros de verificação](https://github.com/xTestMeX/cube-world-mod-releases/releases/tag/0.37.0-coop.preview.69)
+- [Windows x64 — launcher EXE](https://github.com/xTestMeX/cube-world-mod-releases/releases/download/0.37.0-coop.preview.70/CubeWorldMod-Windows-x64.exe)
+- [Linux x64 — AppImage](https://github.com/xTestMeX/cube-world-mod-releases/releases/download/0.37.0-coop.preview.70/CubeWorldMod-Linux-x64.AppImage)
+- [Notas, pacotes e ficheiros de verificação](https://github.com/xTestMeX/cube-world-mod-releases/releases/tag/0.37.0-coop.preview.70)
 
 Cada pessoa precisa da sua própria instalação compatível do jogo. O download **não inclui Cube.exe, Server.exe, bases de dados originais ou saves**. O launcher verifica os executáveis antes de preparar uma cópia isolada. As DLLs do mod continuam x86, como exige o jogo original.
+
+## Entrada e guardas em cooperativo · preview.70
+
+O servidor confirma a entrada com base na revisão do setor já validada pelo cliente. Os guardas recebidos aparecem assim que a geometria e a decoração do setor estão prontas.
 
 ## Entrada nas estruturas · preview.69
 
@@ -127,85 +134,7 @@ Corrige as validações do servidor que usavam endereços absolutos da base pref
 
 **Atualizar:** anfitrião e convidados fecham jogo/servidor, procuram atualizações, deixam o launcher reiniciar e confirmam **launcher 0.2.32 / mod preview.33** antes de criar uma sessão nova no mesmo mundo. Não exige outro mundo ou perfil. Configurações, saves, conteúdo e intervalos de rede/geração mantidos.
 
-Testes curtos com o export real da DLL sobre dados PE relocados, configuração ativa copiada e instruções corrompidas; handshake TLS, estados antigos/parciais, portas divergentes e libertação de slots; builds dos dois launchers, interface headless, assinaturas Ed25519 e hashes verificados. **Nenhum Cube.exe/Server.exe foi aberto pelo agente.** Os registos antigos não identificam a fase interna/base: não demonstram que ASLR foi a causa daquela execução específica. O arranque real desta correção continua a precisar de confirmação dos jogadores.
-
-## Edifícios completos e carregamento coordenado — preview.32
-
-Prepara as malhas das estruturas separadamente e publica o conjunto entre frames, incluindo locais que partilham chunks. Verifica os blocos efetivamente recebidos, decoração e habitantes esperados; os NPCs conservam a ativação por proximidade. A entrada no local e o combate são coordenados com a confirmação de cada jogador.
-
-Antecipa pesquisa e replay em zonas carregadas e apresenta a fase de preparação ao chegar diretamente a um edifício incompleto. Revalida após reentrada, religação e reset gráfico; ranks/passivas não reiniciam o cenário. O levantamento do terreno evita cópias de memória por voxel e aplica pausa adaptativa, mantendo os limites de edição/replay.
-
-**Atualizar:** anfitrião e convidados fecham jogo e servidor, procuram atualizações, deixam o launcher reiniciar e confirmam **launcher 0.2.31 / mod preview.32** antes de criar uma sessão nova. Não exige um mundo novo. Configurações, saves, recompensas e regras das expedições conservados.
-
-Compilações, testes curtos x86 de publicação/ownership/reset/colunas/religação/quatro jogadores, testes .NET, interface headless, assinaturas Ed25519 e hashes verificados. Nenhum Cube.exe/Server.exe foi aberto pelo agente. **O aspeto, IA e desempenho reais continuam por confirmar pelos jogadores.** Esta versão conserva o replay nativo; não promete criação instantânea nem aceleração de 10×.
-
-## Necromante, relíquia e HUDs — preview.31
-
-Corrige o clique de **F6 → Fechar** que escapava para ataques nativos do Mage. O **Cajado Ossário** passa a usar a transformação da mão no desenho, sem provocar um ataque nativo. O M1 ganha a aquisição em falta de inimigos e objetos destrutíveis baixos, verifica linha de visão e atualiza o **contador de combo nativo** apenas quando causa dano.
-
-Convidados podem recolher a relíquia através da validação automática do servidor: a oferta e o pedido passam a comparar a mesma identidade pública do local. Guardas, distância, gravação e proteção contra duplicações continuam obrigatórios.
-
-Os baús entregam as **armas aleatórias sem o HUD de 0 XP/0 cobre**. Os atributos gerados pelo jogo são preservados, incluindo nas variantes novas. Corrige o apoio de baús, barris e caixas nas ruínas, conservando índices, estados, ciclos e recibos. Inimigos das estruturas usam o poder nativo **+1/+2**; bosses recebem +2.
-
-Os indicadores **R** dos altares/baús mostram os estados disponível, protegido ou já usado. O marcador do prisioneiro acompanha a matriz desenhada em cada frame, conservando o movimento fracionário mesmo com a precisão do D3D9. Mantém o fundo preto a 75% e os intervalos de rede existentes.
-
-**Atualizar:** anfitrião e convidados fecham o jogo e o servidor, usam **Procurar atualizações**, deixam o launcher reiniciar e confirmam **launcher 0.2.30 / mod preview.31** antes de criar uma sessão nova. Não é necessário um mundo novo. Mantém arena reutilizável, rondas contínuas, contagem inicial de dez segundos e cooldown individual de 45 minutos.
-
-Testes curtos de produção, instruções x86, desenho headless, recibos/rollback, loot, religação e rondas passaram. Ambos launchers foram compilados; manifestos Ed25519 e hashes verificados. Nenhum Cube.exe/Server.exe foi aberto pelo agente. **A confirmação visual e de gameplay entre computadores continua a depender dos jogadores.**
-
-## Guardas, armas e correções cooperativas — preview.30
-
-As torres recebem quatro guardas humanos distribuídos pelos pisos e o baú fica protegido até derrotá-los. Inclui torres existentes no cooperativo; em solo aplica-se às torres geradas após atualizar. O Guardião das Ruínas recebe correções de chão/spawn, libertação de slots de encontros antigos e loot pelo percurso nativo de boss.
-
-Corrige duplicação contínua dos prémios de expedição, cliques de venda/largar itens e armas iniciais no Necromante e regresso dos participantes mortos ao descanso após os companheiros completarem a ronda. Baús de acampamentos, ruínas e torres usam **R**, com validação e recibos independentes; os prisioneiros têm indicador e interação de resgate/escolta. A relíquia de missão usa a sua posição física real, incluindo convidados e contratos já aceites. Diário/ofertas recebem prioridade sem aumentar a frequência global de rede.
-
-O M1 do Necromante exige o **Cajado Ossário em mão**, atinge recursos/objetos destrutíveis nativos e apresenta números de dano confirmado. M2 deixa de usar o efeito incorreto de Maldição. A vida dos esqueletos, guardião e exército desce **45%**, preservando o escalamento por pontos. O M1 da **Lâmina Sanguínea perde 30% do dano**; Garras e Cyclone mantêm-se.
-
-As sete armas especiais participam nos drops nativos e no stock das lojas, preservando os atributos, nível, qualidade e upgrades nativos. Reabrir a loja não rerola o stock. Os **preços de compra nos NPCs duplicam**, mantendo o valor de venda do jogador e o crafting.
-
-O launcher **0.2.29** reinicia automaticamente após uma atualização verificada, com jogo/servidor fechados. Quem atualizar a partir do launcher 0.2.28 deve **fechar/reabrir manualmente uma vez** para carregar o novo launcher. Anfitrião e convidados devem usar preview.30 e iniciar uma sessão nova. Mantém as correções anteriores de terreno, rede e expedições.
-
-Compilações e testes curtos dirigidos, interface headless, assinaturas Ed25519 e hashes passaram. **A confirmação real em Windows/Proton e entre computadores continua a depender dos jogadores.** Nenhum Cube.exe/Server.exe foi aberto pelo agente. Itens já duplicados não são apagados automaticamente, pois podem coincidir com exemplares legítimos. Recuar os recibos dos baús requer o backup do mundo correspondente.
-
-## Vampiro, Necromante e intervalo das expedições — preview.29
-
-O Vampiro recebe **20% de velocidade adicional enquanto flutua/voa** e a **cura da Explosão de Sangue é reduzida em 50%**, incluindo os pontos. Armas normais do Rogue e Presa da Noite são rejeitadas antes de equipar; mantém Garras Carmesim e Lâmina Sanguínea. Armas incompatíveis já equipadas voltam à mochila, com bloqueio dos ataques enquanto essa devolução estiver pendente. O Necromante precisa do primeiro ponto no respetivo nó da árvore X, seguido de Apply, para cada uma das quatro skills. M1/M2 e pontos existentes são conservados; o servidor valida os desbloqueios.
-
-As expedições cooperativas têm **45 minutos de cooldown individual ao terminar/sair**, contando apenas o tempo ligado ao servidor. O registo é persistente por personagem no anfitrião e partilhado entre os seus mundos; anfitriões diferentes têm registos próprios. F6 mostra o tempo restante. Saídas repetidas, fechar o jogo ou reiniciar o servidor não permitem contornar o intervalo. Convites/lobby cancelados e preparações falhadas antes do início não gastam o intervalo. A derrota que termina a participação conta como saída; a espera temporária por companheiros mantém as regras anteriores.
-
-Mantém os limites e frequências da rede/terreno, contagem inicial de dez segundos, rondas contínuas, arena reutilizável e correção das hornets. Testes curtos de regras, persistência, falhas de gravação, ligação/reabertura, interceções x86 e interface headless passaram. **O comportamento real em jogo continua por confirmar.** Nenhum Cube.exe/Server.exe foi aberto pelo agente.
-
-Inclui launcher **0.2.28**, Windows x64 e Linux x64 AppImage. Anfitrião e convidados fecham jogo/servidor, procuram atualizações, fecham/reabrem o launcher e iniciam uma nova sessão na **preview.29**. Teste curto: voar/aterrar e tentar uma arma Rogue; investir um ponto no Necromante; sair de uma expedição, observar F6, desligar e regressar para confirmar a pausa do cooldown.
-
-## Hornets que ficavam paradas — preview.28
-
-Corrige três hornets de cada vaga de seis que recebiam arcos, ativando a distância de paragem de arqueiro do motor apesar de a espécie atacar de perto. Todas passam a usar o perfil de combate próximo dos três exemplares que já funcionavam. Arqueiros humanoides e cultistas mantêm o comportamento à distância. Preserva a contagem inicial de 10 segundos, teleporte, rondas contínuas e limites de rede; sem novos hooks nem aumento da frequência de consultas ou envio de terreno.
-
-A receita real de spawn e as instruções originais do Server.exe reproduziram exatamente três hornets com alcance de arqueiro antes da correção e zero depois. Testes curtos de rondas, contagem inicial e religação, assinaturas nativas, builds Windows/Linux e interface headless passaram. DLLs cliente, auxiliares de rede e INIs preservados por hash. **A perseguição e os ataques completos em jogo ainda precisam de confirmação dos jogadores.** Nenhum Cube.exe/Server.exe foi aberto pelo agente.
-
-Inclui launcher **0.2.27**, Windows x64 e Linux x64 AppImage. Todos fecham jogo e servidor, procuram atualizações, fecham/reabrem o launcher e criam uma sessão nova no mesmo mundo, com anfitrião e convidados na **preview.28**. Teste curto: numa vaga de hornets, permanecer a 15–25 blocos para verificar que as seis avançam; recuar dentro da sala e confirmar a perseguição.
-
-## Contagem inicial das expedições — preview.27
-
-A primeira ronda começa **10 segundos depois da chegada confirmada de todos os participantes**. O chat apresenta **10, 9…1** e anuncia o início. Funciona em solo e cooperativo; as rondas 2–10 continuam na mesma sala, sem repetir este atraso ou carregar novamente. O limite de transferência de 90 segundos é independente da contagem.
-
-Mantém a correção de terreno/teleporte da preview.26, cujo funcionamento foi entretanto confirmado pelo utilizador. Configurações, saves e limites de rede preservados. Testes curtos de solo, servidor, cliente/chat, cancelamento, religação, rondas contínuas, builds, emulação dos hooks e interface headless passaram. **A confirmação visual da nova contagem no jogo continua pendente.** Nenhum Cube.exe/Server.exe foi aberto pelo agente.
-
-Inclui launcher **0.2.26**, Windows x64 e Linux x64 AppImage. Todos devem fechar jogo e servidor, atualizar, fechar/reabrir o launcher e criar uma sessão nova no mesmo mundo. Anfitrião e convidados devem usar **preview.27**. Teste curto: observar a contagem antes dos inimigos, concluir a primeira ronda e continuar para a segunda sem repetir a contagem.
-
-## Terreno 9/9 sem teleporte — preview.26
-
-Corrige a sonda de chegada que comparava os valores RGB dos blocos de ar. Esses valores representam iluminação local e podem diferir entre servidor e cliente, mesmo com o mesmo chão e espaço livre. A diferença foi observada por leitura autorizada de uma sessão existente e reproduzida com o código compilado: a DLL anterior rejeita os mesmos dados e a corrigida aceita-os.
-
-A sonda continua a comparar o tipo de todos os blocos, a cor dos sólidos, o chão, a altura, as colunas carregadas e o espaço livre. Apenas deixa de exigir iluminação RGB igual no ar. **Não é necessário criar outro mundo nem apagar a arena guardada.** Não altera o servidor, os limites de rede ou os saves.
-
-Inclui Windows x64 e Linux x64 AppImage, launcher **0.2.25**. Todos devem fechar jogo e servidor, atualizar, fechar/reabrir o launcher e criar uma sessão nova no mesmo mundo. Anfitrião e convidados devem usar **preview.26**. Testar entrada, primeira ronda, passagem à segunda, extração e outra entrada.
-
-Testes dirigidos antes/depois com os mesmos bytes observados, verificações negativas de chão/espaço ocupado, builds, interface headless, assinaturas e hashes passaram. Não foi iniciado Cube.exe/Server.exe nem se escreveu na memória ou nos saves da sessão observada. **O teste real da nova versão continua pendente.** As otimizações anteriores mantêm-se; não há uma medição de carregamento total 10× mais rápido.
-
-## Chegada, recuperação e carregamento — preview.25
-
-Corrige a validação gráfica que rejeitava parcelas concluídas com lista opaca vazia. Mantém as verificações de chão, sondas, coordenadas XYZ, parcela atual e construção terminada. Ao perder a ligação ou terminar o regresso, limpa a reserva e o estado local da transferência. Uma nova tentativa prefere uma arena guardada livre a um slot vazio; o contador de preparação mostra o progresso atual do anfitrião em vez do 9/9 da tentativa anterior.
+Testes curtos com o export real da DLL sobre dados PE relocados, configuração ativa copiada e instruções corrompidas; handshake TLS, estados antigos/parciais, portas divergentes e libertação de slots; builds dos dois launchers, interface headless, assinaturas Ed25519 e hashes verificados. **Nenhum Cube.exe/Server.exe foi aberto pelo agente.** Os registos antigos não identificam a fase interna/base: não demonstram que ASLR foi a causa daquela execução específi…3062 tokens truncated…a. Mantém as verificações de chão, sondas, coordenadas XYZ, parcela atual e construção terminada. Ao perder a ligação ou terminar o regresso, limpa a reserva e o estado local da transferência. Uma nova tentativa prefere uma arena guardada livre a um slot vazio; o contador de preparação mostra o progresso atual do anfitrião em vez do 9/9 da tentativa anterior.
 
 A verificação local da transferência passa de 1000 para 100 ms. O estado de entrada recebe prioridade alternada com as restantes consultas, e os reenvios são limitados. Os orçamentos de construção e envio de blocos mantêm-se. **Não é uma medição de carregamento total 10× mais rápido**; os tempos e FPS reais continuam por medir.
 
